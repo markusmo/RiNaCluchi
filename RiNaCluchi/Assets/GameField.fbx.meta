@@ -39,6 +39,7 @@ ModelImporter:
     100066: runway3_card_field3
     100068: runway3_card_field4
     100070: stack
+    100072: taxiway
     400000: directionalLight1
     400002: //RootNode
     400004: hand1
@@ -75,6 +76,7 @@ ModelImporter:
     400066: runway3_card_field3
     400068: runway3_card_field4
     400070: stack
+    400072: taxiway
     2300000: //RootNode
     2300002: hand1
     2300004: hand10
@@ -110,6 +112,7 @@ ModelImporter:
     2300064: runway3_card_field3
     2300066: runway3_card_field4
     2300068: stack
+    2300070: taxiway
     3300000: //RootNode
     3300002: hand1
     3300004: hand10
@@ -145,41 +148,43 @@ ModelImporter:
     3300064: runway3_card_field3
     3300066: runway3_card_field4
     3300068: stack
+    3300070: taxiway
     4300000: gamefield
-    4300002: hanger
-    4300004: heliplatform
-    4300006: heliplatform_card_field4
-    4300008: heliplatform_card_field3
-    4300010: heliplatform_card_field2
-    4300012: heliplatform_card_field1
-    4300014: runway1
-    4300016: runway1_card_field4
-    4300018: runway1_card_field3
-    4300020: runway1_card_field2
-    4300022: runway1_card_field1
-    4300024: runway2
-    4300026: runway2_card_field4
-    4300028: runway2_card_field3
-    4300030: runway2_card_field2
-    4300032: runway2_card_field1
-    4300034: runway3
-    4300036: runway3_card_field4
-    4300038: runway3_card_field3
-    4300040: runway3_card_field2
-    4300042: runway3_card_field1
-    4300044: hand1
-    4300046: hand11
-    4300048: hand6
-    4300050: hand12
-    4300052: hand2
-    4300054: hand3
-    4300056: hand4
-    4300058: hand5
-    4300060: hand7
-    4300062: hand8
-    4300064: hand9
-    4300066: hand10
-    4300068: stack
+    4300002: stack
+    4300004: hand1
+    4300006: hand11
+    4300008: hand6
+    4300010: hand12
+    4300012: hand2
+    4300014: hand3
+    4300016: hand4
+    4300018: hand5
+    4300020: hand7
+    4300022: hand8
+    4300024: hand9
+    4300026: hand10
+    4300028: taxiway
+    4300030: runway3
+    4300032: runway2
+    4300034: runway1
+    4300036: heliplatform
+    4300038: hanger
+    4300040: runway3_card_field4
+    4300042: runway3_card_field3
+    4300044: runway3_card_field2
+    4300046: runway3_card_field1
+    4300048: runway2_card_field4
+    4300050: runway2_card_field3
+    4300052: runway2_card_field2
+    4300054: runway2_card_field1
+    4300056: runway1_card_field4
+    4300058: runway1_card_field3
+    4300060: runway1_card_field2
+    4300062: runway1_card_field1
+    4300064: heliplatform_card_field4
+    4300066: heliplatform_card_field3
+    4300068: heliplatform_card_field2
+    4300070: heliplatform_card_field1
     9500000: //RootNode
   materials:
     importMaterials: 1
