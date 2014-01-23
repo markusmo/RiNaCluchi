@@ -2,10 +2,11 @@ using System;
 
 namespace AssemblyCSharp
 {
-		public class GIV
+		public class GIV : Aircraft
 		{
 				public GIV ()
 				{
+						this.Size = 7;
 				}
 		}
 }

@@ -12,11 +12,6 @@ namespace AssemblyCSharp
 {
 		public abstract class Aircraft
 		{
-				public Aircraft ()
-				{
-				
-				}
-
 				public int Size {
 						get;
 						private		set;

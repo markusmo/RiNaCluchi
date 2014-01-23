@@ -2,10 +2,11 @@ using System;
 
 namespace AssemblyCSharp
 {
-		public class SKA200
+		public class SKA200 : Aircraft
 		{
 				public SKA200 ()
 				{
+						this.Size = 6;
 				}
 		}
 }

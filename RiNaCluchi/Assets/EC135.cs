@@ -2,10 +2,11 @@ using System;
 
 namespace AssemblyCSharp
 {
-		public class EmptyClass
+		public class EC135 : Aircraft, RotoaryWing
 		{
-				public EmptyClass ()
+				public EC135 ()
 				{
+						this.Size = 2;
 				}
 		}
 }
