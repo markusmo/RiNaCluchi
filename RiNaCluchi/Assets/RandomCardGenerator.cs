@@ -2,7 +2,7 @@ using System;
 
 namespace AssemblyCSharp
 {
-		public class RandomCardGenerator
+		public class RandomCardGenerator : RandomGenerator<Card>
 		{
 				public RandomCardGenerator ()
 				{
