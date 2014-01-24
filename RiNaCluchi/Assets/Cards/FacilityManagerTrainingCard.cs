@@ -10,24 +10,17 @@
 using System;
 namespace AssemblyCSharp
 {
-		public abstract class PersonCard : Card
+		public class FacilityManagerTrainingCard:EnchancementCard,TrainingCard
 		{
-
-				public int MaintenanceSkill {
-						get;
-						set;
+				public FacilityManagerTrainingCard ()
+				{
+						this.CleanPlus = 1;
 				}
 
-				public int CleanSkill {
-						get;
-						set;
+				public override double getProbability ()
+				{
+						return 10.0 / 3;
 				}
-
-				public int Tiredness {
-						get;
-						set;
-				}
-
 		}
 }
 

@@ -10,32 +10,8 @@
 using System;
 namespace AssemblyCSharp
 {
-		public abstract class Aircraft
+		public interface FoodCard:Card
 		{
-				public int Size {
-						get;
-						protected		set;
-				}
-
-				public int Cleanlyness {
-						get;
-						protected		set;
-				}
-
-				public int Maintenance {
-						get;
-						protected	set;
-				}
-
-				public int Fuel {
-						get;
-						protected set;
-				}
-
-				public int TaxiTime {
-						get;
-						protected set;
-				}
 		}
 }
 

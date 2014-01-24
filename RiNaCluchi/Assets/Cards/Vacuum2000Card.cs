@@ -10,10 +10,18 @@
 using System;
 namespace AssemblyCSharp
 {
-		public abstract class EventCard : Card
+		public class Vacuum2000Card:EnchancementCard, Tool
 		{
-				public abstract GameEvent getEvent ();
-			
+				public Vacuum2000Card ()
+				{
+						this.CleanPlus = 1;
+						this.Duration = 6;
+				}
+
+				public override double getProbability ()
+				{
+						return 0.05;
+				}
 		}
 }
 

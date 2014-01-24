@@ -10,31 +10,17 @@
 using System;
 namespace AssemblyCSharp
 {
-		public abstract class Aircraft
+		public class WrenchUltraMega2002Card:EnchancementCard,Tool
 		{
-				public int Size {
-						get;
-						protected		set;
+				public WrenchUltraMega2002Card ()
+				{
+						this.Duration = 6;
+						this.MaintenancePlus = 1;
 				}
 
-				public int Cleanlyness {
-						get;
-						protected		set;
-				}
-
-				public int Maintenance {
-						get;
-						protected	set;
-				}
-
-				public int Fuel {
-						get;
-						protected set;
-				}
-
-				public int TaxiTime {
-						get;
-						protected set;
+				public override double getProbability ()
+				{
+						return 0.05;
 				}
 		}
 }
