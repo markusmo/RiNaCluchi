@@ -10,16 +10,20 @@
 using System;
 namespace AssemblyCSharp
 {
-		public class FacilityManagerTrainingCard:EnchancementCard,TrainingCard
+		public class Place2EnchancementCard:EventCard
 		{
-				public FacilityManagerTrainingCard ()
+				public Place2EnchancementCard ()
 				{
-						this.CleanPlus = 1;
 				}
 
+				public override IGameEvent getEvent ()
+				{
+						throw new NotImplementedException ();
+				}
+		
 				public override double getProbability ()
 				{
-						return 10.0 / 3/100;
+						return 1.0 / 100;
 				}
 		}
 }
