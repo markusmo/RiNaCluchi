@@ -5,7 +5,7 @@ using System.Runtime.CompilerServices;
 
 namespace AssemblyCSharp
 {
-	public abstract class RandomGenerator<T> where T : Type, new()
+	public abstract class RandomGenerator<T> where T : Type
 	{
 		private List<KeyValuePair<T,double>> elements;
 
@@ -30,7 +30,7 @@ namespace AssemblyCSharp
 				cumulative += elements [i].Value;
 				if (dice < cumulative) 
 				{
-					return new elements [i].Key;
+					return Activator.CreateInstance(elements [i].Key ());
 				}
 			}
 		}
