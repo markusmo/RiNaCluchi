@@ -10,7 +10,7 @@
 using System;
 namespace AssemblyCSharp
 {
-		public class Vacuum2000Card:EnchancementCard, Tool
+		public class Vacuum2000Card:EnchancementCard, ToolCard
 		{
 				public Vacuum2000Card ()
 				{
@@ -20,7 +20,7 @@ namespace AssemblyCSharp
 
 				public override double getProbability ()
 				{
-						return 0.05;
+					return (10 / 3 / 100.0);
 				}
 		}
 }

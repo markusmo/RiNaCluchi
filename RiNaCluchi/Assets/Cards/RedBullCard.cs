@@ -10,17 +10,16 @@
 using System;
 namespace AssemblyCSharp
 {
-		public class PowerFlannelCard:EnchancementCard,ToolCard
+	public class RedBullCard:EnchancementCard, FoodCard
 		{
-				public PowerFlannelCard ()
+				public RedBullCard ()
 				{
-						this.CleanPlus = 2;
-						this.Duration = 6;
+						this.TirednessMinus = 2;
 				}
 
 				public override double getProbability ()
 				{
-					return (10 / 3 / 100.0);
+						return (5 / 3.0) / 100;
 				}
 		}
 }

@@ -25,12 +25,12 @@ namespace AssemblyCSharp
 			double dice = r.NextDouble ();
 
 			double cumulative = 0.0;
-			for (int i = 0; i < elements.Count (); i++) 
+			for (int i = 0; i < elements.Count; i++) 
 			{
 				cumulative += elements [i].Value;
 				if (dice < cumulative) 
 				{
-					return Activator.CreateInstance(elements [i].Key ());
+					return Activator.CreateInstance(elements[i].Key);
 				}
 			}
 		}

@@ -10,7 +10,7 @@
 using System;
 namespace AssemblyCSharp
 {
-		public class WrenchUltraMega2002Card:EnchancementCard,Tool
+		public class WrenchUltraMega2002Card:EnchancementCard,ToolCard
 		{
 				public WrenchUltraMega2002Card ()
 				{
@@ -20,7 +20,7 @@ namespace AssemblyCSharp
 
 				public override double getProbability ()
 				{
-						return 0.05;
+					return (10 / 3 / 100.0);
 				}
 		}
 }

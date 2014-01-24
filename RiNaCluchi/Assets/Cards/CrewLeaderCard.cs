@@ -12,17 +12,16 @@ namespace AssemblyCSharp
 {
 		public class CrewLeaderCard:PersonCard
 		{
-		public CrewLeaderCard ()
+				public CrewLeaderCard ()
 				{
 						this.MaintenanceSkill = 3;
 						this.CleanSkill = 3;
 				}
-
 			
-		public override double getProbability ()
-			{
-			return 0.15;
-			}
+				public override double getProbability ()
+				{
+						return 0.15;
+				}
 		}
 }
 
