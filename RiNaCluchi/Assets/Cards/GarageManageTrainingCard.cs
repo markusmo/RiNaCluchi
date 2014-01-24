@@ -19,7 +19,7 @@ namespace AssemblyCSharp
 
 				public override double getProbability ()
 				{
-						return 10.0 / 3;
+						return 10.0 / 3/100;
 				}
 		}
 }

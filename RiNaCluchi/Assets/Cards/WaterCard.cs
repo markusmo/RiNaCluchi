@@ -10,9 +10,11 @@
 using System;
 namespace AssemblyCSharp
 {
-		public interface GameEvent
+		public class WaterCard:EnchancementCard,FoodCard
 		{
-
+				public WaterCard ()
+				{
+				}
 		}
 }
 

@@ -10,17 +10,9 @@
 using System;
 namespace AssemblyCSharp
 {
-		public class FacilityManagerTrainingCard:EnchancementCard,TrainingCard
+		public interface IGameEvent
 		{
-				public FacilityManagerTrainingCard ()
-				{
-						this.CleanPlus = 1;
-				}
 
-				public override double getProbability ()
-				{
-						return 10.0 / 3/100;
-				}
 		}
 }
 
