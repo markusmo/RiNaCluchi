@@ -10,31 +10,16 @@
 using System;
 namespace AssemblyCSharp
 {
-		public abstract class Aircraft
+		public class GarageManageTrainingCard:EnchancementCard,TrainingCard
 		{
-				public int Size {
-						get;
-						protected		set;
+				public GarageManageTrainingCard ()
+				{
+						this.MaintenancePlus = 1;
 				}
 
-				public int Cleanlyness {
-						get;
-						protected		set;
-				}
-
-				public int Maintenance {
-						get;
-						protected	set;
-				}
-
-				public int Fuel {
-						get;
-						protected set;
-				}
-
-				public int TaxiTime {
-						get;
-						protected set;
+				public override double getProbability ()
+				{
+						return 10.0 / 3;
 				}
 		}
 }

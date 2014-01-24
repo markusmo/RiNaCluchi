@@ -10,32 +10,31 @@
 using System;
 namespace AssemblyCSharp
 {
-		public abstract class Aircraft
+		public abstract class PersonCard : Card
 		{
-				public int Size {
-						get;
-						protected		set;
+
+				public PersonCard ()
+				{
+						this.Tiredness = 4;
 				}
 
-				public int Cleanlyness {
-						get;
-						protected		set;
-				}
-
-				public int Maintenance {
-						get;
-						protected	set;
-				}
-
-				public int Fuel {
+				public int MaintenanceSkill {
 						get;
 						protected set;
 				}
 
-				public int TaxiTime {
+				public int CleanSkill {
 						get;
 						protected set;
 				}
+
+				public int Tiredness {
+						get;
+						protected set;
+				}
+
+				public abstract double getProbability ();
+
 		}
 }
 

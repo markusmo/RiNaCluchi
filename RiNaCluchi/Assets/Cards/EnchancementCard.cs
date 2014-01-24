@@ -10,9 +10,28 @@
 using System;
 namespace AssemblyCSharp
 {
-		public interface Card
+		public abstract class EnchancementCard : Card
 		{
-					
+		
+		public int MaintenancePlus{
+			get;
+			protected set;
+		}
+		
+		public int CleanPlus {
+			get;
+			protected set;
+		}
+		
+		public int Duration {
+			get;
+			protected set;
+		}
+		public int TirednessMinus {
+			get;
+			protected set;
+		}
+		public abstract double getProbability ();
 		}
 }
 

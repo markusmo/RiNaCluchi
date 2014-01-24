@@ -10,23 +10,18 @@
 using System;
 namespace AssemblyCSharp
 {
-		public abstract class EnchancementCard : Card
+		public class PowerFlannelCard:EnchancementCard,ToolCard
 		{
-		
-		public int MaintenancePlus{
-			get;
-			set;
-		}
-		
-		public int CleanPlus {
-			get;
-			set;
-		}
-		
-		public int Duration {
-			get;
-			set;
-		}
+				public PowerFlannelCard ()
+				{
+						this.CleanPlus = 2;
+						this.Duration = 6;
+				}
+
+				public override double getProbability ()
+				{
+						return 0.05;
+				}
 		}
 }
 
