@@ -15,6 +15,10 @@ namespace AssemblyCSharp
 				public WaterCard ()
 				{
 				}
+		public override double getProbability ()
+			{
+			return 0.01;
+			}
 		}
 }
 

@@ -5,9 +5,9 @@ using System.Runtime.CompilerServices;
 
 namespace AssemblyCSharp
 {
-		public abstract class RandomGenerator<T> where T : Type
+		public abstract class RandomGenerator<T> 
 		{
-				public abstract void AddElement (Type element, double probability);
+				public abstract void AddElement (string element, double probability);
 
 				public abstract T GenerateElement ();
 		}

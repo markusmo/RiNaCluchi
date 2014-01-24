@@ -13,8 +13,5 @@ public class Controller : MonoBehaviour {
 	
 	}
 
-	void OnMouseDown()
-	{
 
-	}
 }

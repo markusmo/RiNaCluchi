@@ -12,9 +12,9 @@ namespace AssemblyCSharp
 						this.elements = new List<KeyValuePair<Type,double>> ();
 				}
 
-				public override void AddElement (Type element, double probability)
+				public override void AddElement (string element, double probability)
 				{
-						this.elements.Add (new KeyValuePair<Type, double> (element, probability));
+						this.elements.Add (new KeyValuePair<Type, double> (Type.GetType(element), probability));
 				}
 
 				public override Aircraft GenerateElement ()
@@ -26,9 +26,10 @@ namespace AssemblyCSharp
 						for (int i = 0; i < elements.Count; i++) {
 								cumulative += elements [i].Value;
 								if (dice < cumulative) {
-										return (Aircraft) Activator.CreateInstance (elements [i].Key);
+										return (Aircraft) Activator.CreateInstance (elements [i].Key.GetType());
 								}
 						}
+			return null;
 				}
 		}
 }
