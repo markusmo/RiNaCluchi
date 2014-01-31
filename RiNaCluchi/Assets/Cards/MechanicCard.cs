@@ -23,6 +23,15 @@ public override double getProbability ()
 			{
 			return 0.30;
 			}
+
+		public override Card Clone ()
+		{
+			MechanicCard rtVal = new MechanicCard ();
+			rtVal.MaintenanceSkill = this.MaintenanceSkill;
+			rtVal.CleanSkill = this.CleanSkill;
+			rtVal.Tiredness = this.Tiredness;
+			return rtVal;
+		}
 		}
 }
 

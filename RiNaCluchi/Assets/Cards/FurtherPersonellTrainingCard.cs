@@ -21,6 +21,15 @@ namespace AssemblyCSharp
 		{
 			return 10.0/3/100;
 		}
+		public override Card Clone ()
+		{
+			FurtherPersonellTrainingCard rtVal = new FurtherPersonellTrainingCard();
+			rtVal.CleanPlus = this.CleanPlus;
+			rtVal.Duration = this.Duration;
+			rtVal.MaintenancePlus = this.MaintenancePlus;
+			rtVal.TirednessMinus = this.TirednessMinus;
+			return rtVal;
+		}
 		}
 }
 

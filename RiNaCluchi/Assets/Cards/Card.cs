@@ -12,7 +12,8 @@ namespace AssemblyCSharp
 {
 		public interface Card
 		{
-		 double getProbability();
+		 	double getProbability();
+			Card Clone();
 		}
 }
 

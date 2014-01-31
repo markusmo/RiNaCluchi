@@ -25,6 +25,11 @@ namespace AssemblyCSharp
 				{
 						return 1.0 / 100;
 				}
+		public override Card Clone ()
+		{
+			return new Draw2CardsCard ();
+			
+		}
 		}
 }
 

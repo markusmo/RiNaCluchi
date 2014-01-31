@@ -32,6 +32,8 @@ namespace AssemblyCSharp
 			protected set;
 		}
 		public abstract double getProbability ();
+		
+		public abstract Card Clone ();
 		}
 }
 

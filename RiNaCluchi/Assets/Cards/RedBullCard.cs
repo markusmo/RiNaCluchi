@@ -21,6 +21,15 @@ namespace AssemblyCSharp
 				{
 						return (5 / 3.0) / 100;
 				}
+		public override Card Clone ()
+		{
+			RedBullCard rtVal = new RedBullCard();
+			rtVal.CleanPlus = this.CleanPlus;
+			rtVal.Duration = this.Duration;
+			rtVal.MaintenancePlus = this.MaintenancePlus;
+			rtVal.TirednessMinus = this.TirednessMinus;
+			return rtVal;
+		}
 		}
 }
 

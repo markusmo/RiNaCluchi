@@ -204,9 +204,10 @@ GameObject:
   - 4: {fileID: 58779834}
   - 33: {fileID: 58779836}
   - 23: {fileID: 58779835}
+  - 114: {fileID: 58779837}
   m_Layer: 0
   m_Name: hand3
-  m_TagString: Untagged
+  m_TagString: hand3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -252,6 +253,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 58779833}
   m_Mesh: {fileID: 4300014, guid: 88166c00e89744428a4f9d69b76a79d0, type: 3}
+--- !u!114 &58779837
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 58779833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eee5734efe3972146b678438cbd55cd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &108185276
 GameObject:
   m_ObjectHideFlags: 0
@@ -436,9 +448,10 @@ GameObject:
   - 4: {fileID: 442815694}
   - 33: {fileID: 442815696}
   - 23: {fileID: 442815695}
+  - 114: {fileID: 442815697}
   m_Layer: 0
   m_Name: hand7
-  m_TagString: Untagged
+  m_TagString: hand7
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -484,6 +497,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 442815693}
   m_Mesh: {fileID: 4300020, guid: 88166c00e89744428a4f9d69b76a79d0, type: 3}
+--- !u!114 &442815697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 442815693}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eee5734efe3972146b678438cbd55cd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &473182224
 GameObject:
   m_ObjectHideFlags: 0
@@ -494,9 +518,10 @@ GameObject:
   - 4: {fileID: 473182225}
   - 33: {fileID: 473182227}
   - 23: {fileID: 473182226}
+  - 114: {fileID: 473182228}
   m_Layer: 0
   m_Name: hand9
-  m_TagString: Untagged
+  m_TagString: hand9
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -542,6 +567,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 473182224}
   m_Mesh: {fileID: 4300024, guid: 88166c00e89744428a4f9d69b76a79d0, type: 3}
+--- !u!114 &473182228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 473182224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eee5734efe3972146b678438cbd55cd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &517376870
 GameObject:
   m_ObjectHideFlags: 0
@@ -668,9 +704,10 @@ GameObject:
   - 4: {fileID: 639074107}
   - 33: {fileID: 639074109}
   - 23: {fileID: 639074108}
+  - 114: {fileID: 639074110}
   m_Layer: 0
   m_Name: hand11
-  m_TagString: Untagged
+  m_TagString: hand11
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -716,6 +753,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 639074106}
   m_Mesh: {fileID: 4300006, guid: 88166c00e89744428a4f9d69b76a79d0, type: 3}
+--- !u!114 &639074110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 639074106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eee5734efe3972146b678438cbd55cd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &698863124
 GameObject:
   m_ObjectHideFlags: 0
@@ -1482,9 +1530,10 @@ GameObject:
   - 4: {fileID: 1272316261}
   - 33: {fileID: 1272316263}
   - 23: {fileID: 1272316262}
+  - 114: {fileID: 1272316264}
   m_Layer: 0
   m_Name: hand4
-  m_TagString: Untagged
+  m_TagString: hand4
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1530,6 +1579,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1272316260}
   m_Mesh: {fileID: 4300016, guid: 88166c00e89744428a4f9d69b76a79d0, type: 3}
+--- !u!114 &1272316264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1272316260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eee5734efe3972146b678438cbd55cd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1285214294
 GameObject:
   m_ObjectHideFlags: 0
@@ -1636,9 +1696,10 @@ GameObject:
   - 4: {fileID: 1436750222}
   - 33: {fileID: 1436750224}
   - 23: {fileID: 1436750223}
+  - 114: {fileID: 1436750225}
   m_Layer: 0
   m_Name: hand10
-  m_TagString: Untagged
+  m_TagString: hand10
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1684,6 +1745,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1436750221}
   m_Mesh: {fileID: 4300026, guid: 88166c00e89744428a4f9d69b76a79d0, type: 3}
+--- !u!114 &1436750225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1436750221}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eee5734efe3972146b678438cbd55cd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1502581287
 GameObject:
   m_ObjectHideFlags: 0
@@ -1694,9 +1766,10 @@ GameObject:
   - 4: {fileID: 1502581288}
   - 33: {fileID: 1502581290}
   - 23: {fileID: 1502581289}
+  - 114: {fileID: 1502581291}
   m_Layer: 0
   m_Name: hand6
-  m_TagString: Untagged
+  m_TagString: hand6
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1742,6 +1815,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1502581287}
   m_Mesh: {fileID: 4300008, guid: 88166c00e89744428a4f9d69b76a79d0, type: 3}
+--- !u!114 &1502581291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1502581287}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eee5734efe3972146b678438cbd55cd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1571915977
 GameObject:
   m_ObjectHideFlags: 0
@@ -1752,9 +1836,10 @@ GameObject:
   - 4: {fileID: 1571915978}
   - 33: {fileID: 1571915980}
   - 23: {fileID: 1571915979}
+  - 114: {fileID: 1571915981}
   m_Layer: 0
   m_Name: hand12
-  m_TagString: Untagged
+  m_TagString: hand12
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1800,6 +1885,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1571915977}
   m_Mesh: {fileID: 4300010, guid: 88166c00e89744428a4f9d69b76a79d0, type: 3}
+--- !u!114 &1571915981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1571915977}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eee5734efe3972146b678438cbd55cd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1639140235
 GameObject:
   m_ObjectHideFlags: 0
@@ -1868,9 +1964,10 @@ GameObject:
   - 4: {fileID: 1710400173}
   - 33: {fileID: 1710400175}
   - 23: {fileID: 1710400174}
+  - 114: {fileID: 1710400176}
   m_Layer: 0
   m_Name: hand1
-  m_TagString: Untagged
+  m_TagString: hand1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1916,6 +2013,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1710400172}
   m_Mesh: {fileID: 4300004, guid: 88166c00e89744428a4f9d69b76a79d0, type: 3}
+--- !u!114 &1710400176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1710400172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eee5734efe3972146b678438cbd55cd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1771079983
 GameObject:
   m_ObjectHideFlags: 0
@@ -1984,9 +2092,10 @@ GameObject:
   - 4: {fileID: 1838689972}
   - 33: {fileID: 1838689974}
   - 23: {fileID: 1838689973}
+  - 114: {fileID: 1838689975}
   m_Layer: 0
   m_Name: hand5
-  m_TagString: Untagged
+  m_TagString: hand5
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2032,6 +2141,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1838689971}
   m_Mesh: {fileID: 4300018, guid: 88166c00e89744428a4f9d69b76a79d0, type: 3}
+--- !u!114 &1838689975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1838689971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eee5734efe3972146b678438cbd55cd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1910221204
 GameObject:
   m_ObjectHideFlags: 0
@@ -2042,9 +2162,10 @@ GameObject:
   - 4: {fileID: 1910221205}
   - 33: {fileID: 1910221207}
   - 23: {fileID: 1910221206}
+  - 114: {fileID: 1910221208}
   m_Layer: 0
   m_Name: hand8
-  m_TagString: Untagged
+  m_TagString: hand8
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2090,6 +2211,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1910221204}
   m_Mesh: {fileID: 4300022, guid: 88166c00e89744428a4f9d69b76a79d0, type: 3}
+--- !u!114 &1910221208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1910221204}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eee5734efe3972146b678438cbd55cd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1911751110
 GameObject:
   m_ObjectHideFlags: 0
@@ -2436,9 +2568,10 @@ GameObject:
   - 4: {fileID: 2044872117}
   - 33: {fileID: 2044872119}
   - 23: {fileID: 2044872118}
+  - 114: {fileID: 2044872120}
   m_Layer: 0
   m_Name: hand2
-  m_TagString: Untagged
+  m_TagString: hand2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2484,3 +2617,14 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2044872116}
   m_Mesh: {fileID: 4300012, guid: 88166c00e89744428a4f9d69b76a79d0, type: 3}
+--- !u!114 &2044872120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2044872116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eee5734efe3972146b678438cbd55cd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

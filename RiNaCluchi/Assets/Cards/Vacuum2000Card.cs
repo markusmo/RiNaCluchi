@@ -22,6 +22,17 @@ namespace AssemblyCSharp
 				{
 					return (10 / 3 / 100.0);
 				}
+
+		
+		public override Card Clone ()
+		{
+			Vacuum2000Card rtVal = new Vacuum2000Card();
+			rtVal.CleanPlus = this.CleanPlus;
+			rtVal.Duration = this.Duration;
+			rtVal.MaintenancePlus = this.MaintenancePlus;
+			rtVal.TirednessMinus = this.TirednessMinus;
+			return rtVal;
+		}
 		}
 }
 

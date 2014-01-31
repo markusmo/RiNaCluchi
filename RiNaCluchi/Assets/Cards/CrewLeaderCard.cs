@@ -22,6 +22,15 @@ namespace AssemblyCSharp
 				{
 						return 0.15;
 				}
+
+		public override Card Clone ()
+		{
+			CrewLeaderCard rtVal = new CrewLeaderCard ();
+			rtVal.MaintenanceSkill = this.MaintenanceSkill;
+			rtVal.CleanSkill = this.CleanSkill;
+			rtVal.Tiredness = this.Tiredness;
+			return rtVal;
+		}
 		}
 }
 

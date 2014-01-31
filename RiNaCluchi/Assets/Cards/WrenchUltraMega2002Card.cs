@@ -20,7 +20,17 @@ namespace AssemblyCSharp
 
 				public override double getProbability ()
 				{
-					return (10 / 3 / 100.0);
+						return (10 / 3 / 100.0);
+				}
+		
+				public override Card Clone ()
+				{
+						WrenchUltraMega2002Card rtVal = new WrenchUltraMega2002Card ();
+						rtVal.CleanPlus = this.CleanPlus;
+						rtVal.Duration = this.Duration;
+						rtVal.MaintenancePlus = this.MaintenancePlus;
+						rtVal.TirednessMinus = this.TirednessMinus;
+			return rtVal;
 				}
 		}
 }

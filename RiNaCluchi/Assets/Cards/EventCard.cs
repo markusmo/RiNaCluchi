@@ -15,6 +15,10 @@ namespace AssemblyCSharp
 				public abstract IGameEvent getEvent ();
 
 				public abstract double getProbability ();
+
+				public abstract Card Clone ();
+
+
 		}
 }
 

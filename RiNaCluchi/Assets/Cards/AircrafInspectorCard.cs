@@ -12,7 +12,7 @@ namespace AssemblyCSharp
 {
 		public class AircrafInspectorCard:PersonCard
 		{
-		public AircrafInspectorCard ()
+				public AircrafInspectorCard ()
 				{
 						this.MaintenanceSkill = 2;
 						this.CleanSkill = 2;
@@ -21,6 +21,15 @@ namespace AssemblyCSharp
 				public override double getProbability ()
 				{
 						return 0.25;
+				}
+
+				public override Card Clone ()
+				{
+						AircrafInspectorCard rtVal = new AircrafInspectorCard ();
+						rtVal.MaintenanceSkill = this.MaintenanceSkill;
+						rtVal.CleanSkill = this.CleanSkill;
+						rtVal.Tiredness = this.Tiredness;
+						return rtVal;
 				}
 		}
 }

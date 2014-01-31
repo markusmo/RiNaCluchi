@@ -23,7 +23,13 @@ namespace AssemblyCSharp
 
 				public override double getProbability ()
 				{
-						return 2.0/ 100;
+						return 2.0 / 100;
+				}
+
+				public override Card Clone ()
+				{
+						return new Draw2CardsCard ();
+
 				}
 		}
 }

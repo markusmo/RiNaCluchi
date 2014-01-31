@@ -6,9 +6,11 @@ public class HandController : MonoBehaviour {
 	private static int  MAX_CARDS = 12;
 
 	int _actualCards = -1;
-	private Card[] cards = new Card[MAX_CARDS];
+	private HandFieldController[] cards = new HandFieldController[MAX_CARDS];
 
 	private bool handFull = false;
+	private bool pressed = false;
+
 	// Use this for initialization
 	void Start () {
 	
@@ -22,16 +24,27 @@ public class HandController : MonoBehaviour {
 	public void TakeCard(Card card)
 	{
 		if(_actualCards < MAX_CARDS-1){
-			this.cards[++_actualCards] = card;
+			HandFieldController c = cards[++_actualCards];
+			Debug.Log(c);
+			if(this.cards[_actualCards] == null)
+			{
+				this.cards[_actualCards] = (HandFieldController)GameObject.FindGameObjectWithTag("hand"+(_actualCards+1)).GetComponent<HandFieldController>();
+				Debug.Log("null");
+			}
+			this.cards[_actualCards].Card = card;	
+			Debug.Log("Take " +_actualCards);
+			handFull = false;
+			this.SendMessage("PlaceCard",SendMessageOptions.RequireReceiver);
+
 		}else{
 			handFull = true;
-		}
-		Debug.Log("Take" +_actualCards);
+		}	
 	}
 
-	void OnGui()
+	void OnGUI()
 	{
-		if(handFull){
+		if(handFull && !pressed){
+			Debug.Log("Handfull");
 			GUILayout.BeginArea(new Rect(0, 0, Screen.width, Screen.height));
 			GUILayout.FlexibleSpace();
 			
@@ -39,23 +52,18 @@ public class HandController : MonoBehaviour {
 			GUILayout.FlexibleSpace();
 			GUIStyle style = new GUIStyle();
 			style.fontSize = 40	;
-			GUILayout.Label("Start a new Game",style);
+			GUILayout.Label("Hand full!",style);
 			GUILayout.FlexibleSpace();
 			GUILayout.EndHorizontal();
 			
 			GUILayout.BeginHorizontal();
 			GUILayout.FlexibleSpace();
-			bool pressed = GUILayout.Button("Start");
+			pressed = GUILayout.Button("OK");
 			GUILayout.FlexibleSpace();
 			GUILayout.EndHorizontal();
 			
 			GUILayout.FlexibleSpace();
 			GUILayout.EndArea();
-			if(pressed)
-			{
-				Debug.Log ("Pressed Start");
-				this.SendMessage("OnGameStart",SendMessageOptions.RequireReceiver);
-			}
 		}
 
 	}
