@@ -10,9 +10,26 @@
 using System;
 namespace AssemblyCSharp
 {
-		public interface GameEvent
+		public class Place2PersonCard:EventCard
 		{
+				public Place2PersonCard ()
+				{
+				}
 
+				public override IGameEvent getEvent ()
+				{
+						throw new NotImplementedException ();
+				}
+		
+				public override double getProbability ()
+				{
+						return 1.0 / 100;
+				}
+		public override Card Clone ()
+		{
+			return new Draw2CardsCard ();
+			
+		}
 		}
 }
 

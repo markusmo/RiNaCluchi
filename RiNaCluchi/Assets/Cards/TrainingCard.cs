@@ -10,24 +10,8 @@
 using System;
 namespace AssemblyCSharp
 {
-		public abstract class PersonCard : Card
+		public interface TrainingCard:Card
 		{
-
-				public int MaintenanceSkill {
-						get;
-						set;
-				}
-
-				public int CleanSkill {
-						get;
-						set;
-				}
-
-				public int Tiredness {
-						get;
-						set;
-				}
-
 		}
 }
 

@@ -10,23 +10,15 @@
 using System;
 namespace AssemblyCSharp
 {
-		public abstract class EnchancementCard : Card
+		public abstract class EventCard : Card
 		{
-		
-		public int MaintenancePlus{
-			get;
-			set;
-		}
-		
-		public int CleanPlus {
-			get;
-			set;
-		}
-		
-		public int Duration {
-			get;
-			set;
-		}
+				public abstract IGameEvent getEvent ();
+
+				public abstract double getProbability ();
+
+				public abstract Card Clone ();
+
+
 		}
 }
 

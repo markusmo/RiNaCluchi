@@ -10,32 +10,26 @@
 using System;
 namespace AssemblyCSharp
 {
-		public abstract class Aircraft
+		public class Place2EnchancementCard:EventCard
 		{
-				public int Size {
-						get;
-						private		set;
+				public Place2EnchancementCard ()
+				{
 				}
 
-				public int Cleanlyness {
-						get;
-						private		set;
+				public override IGameEvent getEvent ()
+				{
+						throw new NotImplementedException ();
 				}
-
-				public int Maintenance {
-						get;
-						private	set;
+		
+				public override double getProbability ()
+				{
+						return 1.0 / 100;
 				}
-
-				public int Fuel {
-						get;
-						private set;
-				}
-
-				public int TaxiTime {
-						get;
-						private set;
-				}
+		public override Card Clone ()
+		{
+			return new Draw2CardsCard ();
+			
+		}
 		}
 }
 

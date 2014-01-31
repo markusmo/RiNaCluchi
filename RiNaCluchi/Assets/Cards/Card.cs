@@ -10,10 +10,10 @@
 using System;
 namespace AssemblyCSharp
 {
-		public abstract class EventCard : Card
+		public interface Card
 		{
-				public abstract GameEvent getEvent ();
-			
+		 	double getProbability();
+			Card Clone();
 		}
 }
 

@@ -10,9 +10,32 @@
 using System;
 namespace AssemblyCSharp
 {
-		public interface Card
+		public abstract class Aircraft
 		{
-					
+				public int Size {
+						get;
+						protected		set;
+				}
+
+				public int Cleanlyness {
+						get;
+						protected		set;
+				}
+
+				public int Maintenance {
+						get;
+						protected	set;
+				}
+
+				public int Fuel {
+						get;
+						protected set;
+				}
+
+				public int TaxiTime {
+						get;
+						protected set;
+				}
 		}
 }
 
