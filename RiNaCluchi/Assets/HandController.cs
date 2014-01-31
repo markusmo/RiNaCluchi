@@ -31,11 +31,9 @@ public class HandController : MonoBehaviour {
 				this.cards[_actualCards] = (HandFieldController)GameObject.FindGameObjectWithTag("hand"+(_actualCards+1)).GetComponent<HandFieldController>();
 				Debug.Log("null");
 			}
-			this.cards[_actualCards].Card = card;	
+			this.cards[_actualCards].TheCard = card;	
 			Debug.Log("Take " +_actualCards);
 			handFull = false;
-			this.SendMessage("PlaceCard",SendMessageOptions.RequireReceiver);
-
 		}else{
 			handFull = true;
 		}	
