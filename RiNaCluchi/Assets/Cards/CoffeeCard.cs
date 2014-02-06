@@ -35,7 +35,7 @@ namespace AssemblyCSharp
 
 				public override string getName ()
 				{
-						return "Coffeecard";
+						return "CoffeeCard";
 				}
 		}
 }
