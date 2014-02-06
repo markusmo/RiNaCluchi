@@ -1,7 +1,6 @@
 using UnityEngine;
-using System;
+using UnityEditor;
 using System.Collections.Generic;
-using System.Collections;
 
 namespace AssemblyCSharp
 {
@@ -26,7 +25,8 @@ namespace AssemblyCSharp
 						cards.Add ("RedbullCard", "n_energiedrink.png");
 						cards.Add ("Vacuum2000Card", "w_staubsauger.png");
 						cards.Add ("WaterCard", "n_wasser.png");
-						cards.Add ("WrenchUltraMega2002Card", "w_schrauber.png");				}
+						cards.Add ("WrenchUltraMega2002Card", "w_schrauber.png");
+				}
 
 				public static SpawnController GetInstance()
 				{
@@ -41,7 +41,7 @@ namespace AssemblyCSharp
 				{
 						GameObject original = GameObject.FindWithTag ("stackCard");	
 						GameObject clone;
-						clone = (GameObject) GameObject.Instantiate (original, position, rotation);
+						clone = GameObject.Instantiate (original, position, rotation) as GameObject;
 						clone.renderer.material.mainTexture = Resources.Load (cards [card.getName()]) as Texture;
 						return clone;
 				}
@@ -55,9 +55,12 @@ namespace AssemblyCSharp
 				/// <param name="aircraft">Planename.</param>
 				public GameObject SpawnAircraft (Vector3 position, Quaternion rotation, Aircraft aircraft)
 				{
-						//fbx has to be located in "Resources" folder in project view 
-						GameObject spawn = (GameObject) Resources.Load ("Cesna172.fbx");
-						spawn = (GameObject) GameObject.Instantiate (spawn, position, rotation);
+						//fbx has to be located in "Resources" folder in project view
+						//http://forum.unity3d.com/threads/136130-Load-FBX-into-prefab
+						GameObject spawn = AssetDatabase.LoadAssetAtPath("Assets/Resources/" + "Cessna172.fbx",typeof(GameObject)) as GameObject;
+						PrefabUtility.CreatePrefab ("Assets/Resource/" + "Cesna172" + ".prefab", spawn);
+						spawn = GameObject.Instantiate (spawn, position, rotation) as GameObject;
+						spawn.transform.localScale = new Vector3(6,6,6);
 						return spawn;
 				}
 	}
