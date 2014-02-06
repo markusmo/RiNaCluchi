@@ -8,6 +8,8 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 using System;
+using UnityEngine;
+
 namespace AssemblyCSharp
 {
 		public abstract class GameEvent
@@ -33,6 +35,47 @@ namespace AssemblyCSharp
 				public int Runway {
 						get;
 						set;
+				}
+
+				protected Vector3 SpawnPoint1 ()
+				{
+						return GameObject.FindGameObjectWithTag ("spawnpoint1").transform.position;
+
+				}
+
+				protected Vector3 SpawnPoint2 ()
+				{
+						return  GameObject.FindGameObjectWithTag ("spawnpoint2").transform.position;
+				}
+
+				protected Vector3 SpawnPoint3 ()
+				{
+						return GameObject.FindGameObjectWithTag ("spawnpoint3").transform.position;
+				}
+
+				protected Vector3 SpawnPoint4 ()
+				{
+						return GameObject.FindGameObjectWithTag ("spawnpoint4").transform.position;
+				}
+
+				protected Vector3 SpawnPoint5 ()
+				{
+						return SpawnPoint1 () + new Vector3 (0f, 0f, -3.5f);
+				}
+
+				protected Vector3 SpawnPoint6 ()
+				{
+						return SpawnPoint4 () + new Vector3 (0f, 0f, -3.5f);
+				}
+
+				protected Vector3 SpawnPoint7 ()
+				{
+						return SpawnPoint3 () + new Vector3 (0f, 0f, -3.5f);
+				}
+
+				protected Vector3 SpawnPoint8 ()
+				{
+						return SpawnPoint4 ();
 				}
 
 				public abstract void Spawn ();
