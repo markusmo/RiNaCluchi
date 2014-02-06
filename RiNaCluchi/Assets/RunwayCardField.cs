@@ -4,28 +4,26 @@ using AssemblyCSharp;
 
 public class RunwayCardField : MonoBehaviour
 {
-	
 		private Controller _controller;
 		// Use this for initialization
 		void Start ()
 		{
 				_controller = GameObject.FindGameObjectWithTag ("controller").GetComponent<Controller> ();
 		}
-	
 		// Update is called once per frame
 		void Update ()
 		{
-				this.renderer.enabled = !this.IsFree();
+				this.renderer.enabled = !this.IsFree ();
 		}
 
 		private Card _theCard;
-	
+
 		public void PlaceCard (Card card)
 		{
 				this._theCard = card;
 				SpawnController.GetInstance ().ChangeCardTexture (this.gameObject, card);
 		}
-	
+
 		public Card TakeCard ()
 		{
 				if (!IsFree ()) {
@@ -37,15 +35,15 @@ public class RunwayCardField : MonoBehaviour
 		}
 
 		public Card TheCard {
-				get{ return this._theCard;}
-				private	set{ this._theCard = value;}
+				get{ return this._theCard; }
+				private	set{ this._theCard = value; }
 		}
 
 		public bool IsFree ()
 		{
 				return this._theCard == null;
 		}
-	
+
 		void OnMouseDown ()
 		{
 
@@ -62,6 +60,10 @@ public class RunwayCardField : MonoBehaviour
 				if (Input.GetMouseButtonDown (1)) {
 						_controller.PlaceCardInRunway (this);				
 				}
+				GameObject obj = GameObject.FindGameObjectWithTag ("selectcard");
+				Card c = this.TheCard;
+				SpawnController.GetInstance ().ChangeCardTexture (obj, c);
+
 		}
 }
 

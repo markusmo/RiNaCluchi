@@ -26,6 +26,7 @@ TagManager:
   - spawnpoint2
   - spawnpoint3
   - spawnpoint4
+  - selectcard
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX

@@ -61,6 +61,8 @@ public class HandFieldController : MonoBehaviour
 
 		void OnMouseOver ()
 		{	
-
+				GameObject obj = GameObject.FindGameObjectWithTag ("selectcard");
+				Card c = this.TheCard;
+				SpawnController.GetInstance ().ChangeCardTexture (obj, c);
 		}
 }
