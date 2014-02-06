@@ -8,11 +8,20 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 using System;
+using UnityEngine;
+
 namespace AssemblyCSharp
 {
-		public interface IGameEvent
+		public class TakeDownEvent :GameEvent
 		{
+		public TakeDownEvent ():base(ac,time,runway)
+				{
+				}
 
+				public override void Spawn ()
+				{
+						Debug.Log ("Take down on Runway " + Runway + " in " + TimeUntil + " Rounds");
+				}
 		}
 }
 

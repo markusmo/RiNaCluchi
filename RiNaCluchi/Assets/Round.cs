@@ -10,25 +10,21 @@
 using System;
 namespace AssemblyCSharp
 {
-		public class Place2EnchancementCard:EventCard
+		public class Round
 		{
-				public Place2EnchancementCard ()
+				public Round (int roundNumber, int draws)
 				{
+			this.RoundNumber = roundNumber;
+			this.Draws = draws;
 				}
 
-				public override ICardEvent getEvent ()
-				{
-						throw new NotImplementedException ();
-				}
-		
-				public override double getProbability ()
-				{
-						return 1.0 / 100;
-				}
-		public override Card Clone ()
-		{
-			return new Draw2CardsCard ();
-			
+		public int RoundNumber {
+						get;
+						set;
+		}
+		public int Draws {
+						get;
+						set;
 		}
 		}
 }

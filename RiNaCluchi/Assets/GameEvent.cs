@@ -10,26 +10,32 @@
 using System;
 namespace AssemblyCSharp
 {
-		public class Place2EnchancementCard:EventCard
+		public abstract class GameEvent
 		{
-				public Place2EnchancementCard ()
+
+				public GameEvent (Aircraft ac, int time, int runway)
 				{
+						this.Aircraft = ac;
+						this.TimeUntil = time;
+						this.Runway = runway;
 				}
 
-				public override ICardEvent getEvent ()
-				{
-						throw new NotImplementedException ();
+				public int TimeUntil {
+						get;
+						set;
 				}
-		
-				public override double getProbability ()
-				{
-						return 1.0 / 100;
+
+				public Aircraft Aircraft {
+						get;
+						set;
 				}
-		public override Card Clone ()
-		{
-			return new Draw2CardsCard ();
-			
-		}
+
+				public int Runway {
+						get;
+						set;
+				}
+
+				public abstract void Spawn ();
 		}
 }
 

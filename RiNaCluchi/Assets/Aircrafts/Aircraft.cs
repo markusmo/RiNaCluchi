@@ -36,6 +36,10 @@ namespace AssemblyCSharp
 						get;
 					  set;
 				}
+
+		public double getProbability()
+		{
+			return 1/9.0;
 		}
 }
 

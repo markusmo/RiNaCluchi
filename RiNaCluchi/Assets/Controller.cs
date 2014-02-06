@@ -1,11 +1,19 @@
 ﻿using UnityEngine;
 using System.Collections;
 using AssemblyCSharp;
+using System.Collections.Generic;
 
 public class Controller : MonoBehaviour
 {
-		
+		List<GameEvent> gameEvents = new List<GameEvent> ();
 		RunwayController[] runWayControllers = new RunwayController[4];
+		private static int MAX_ROUNDS = 100;
+		private Round actualRound;
+
+		public Round ActualRound {
+				get{ return actualRound;}
+				private set{ this.actualRound = value;}
+		}
 		// Use this for initialization
 		void Start ()
 		{
@@ -13,6 +21,7 @@ public class Controller : MonoBehaviour
 				runWayControllers [1] = (RunwayController)GameObject.FindGameObjectWithTag ("runway2").GetComponent<RunwayController> ();
 				runWayControllers [2] = (RunwayController)GameObject.FindGameObjectWithTag ("runway3").GetComponent<RunwayController> ();
 				runWayControllers [3] = (RunwayController)GameObject.FindGameObjectWithTag ("heliplatform").GetComponent<RunwayController> ();
+				this.actualRound = new Round (MAX_ROUNDS, 5); //First Round, 5 Draws;
 		}
 	
 		// Update is called once per frame
@@ -25,17 +34,17 @@ public class Controller : MonoBehaviour
 		{
 		}
 
-		private int MAX_ROUNDS = 100;
 		private bool GAME_END = false;
 
 		public void EndRound ()
 		{
-				if (MAX_ROUNDS-- <= 0) {
+				if (this.actualRound.RoundNumber - 1 <= 0) {
 						GAME_END = true;
 						return;
 				}
 				CalculateRound ();
 				GenerateEventsForNextRound ();
+				this.actualRound = new Round (actualRound.RoundNumber - 1, 1);	
 		}
 
 		private HandFieldController _hand;
@@ -43,7 +52,7 @@ public class Controller : MonoBehaviour
 		private RunwayCardField _runwayFrom;
 
 		public void GetCardFromHand (HandFieldController hand)
-		{
+		{				
 				this._hand = hand;
 		}
 
@@ -53,40 +62,53 @@ public class Controller : MonoBehaviour
 		}
 
 		public void PlaceCardInRunway (RunwayCardField runway)
-		{
-				
+		{				
 				this._runwayTo = runway;
-				if (_runwayTo.IsFree) {
-					Debug.Log ("placeCard");
+				if (_runwayTo.IsFree ()) {
+						Debug.Log ("placeCard");
 						if (this._hand == null && this._runwayFrom != null) {
-								_runwayTo.TheCard = _runwayFrom.TakeCard();
+								_runwayTo.PlaceCard (_runwayFrom.TakeCard ());
 								_runwayTo = null;
 								_runwayFrom = null;
 						} else if (_runwayFrom == null && this._hand != null) {
-								_runwayTo.TheCard = _hand.TakeCard ();
+								_runwayTo.PlaceCard (_hand.TakeCard ());
 								_hand = null;
 								_runwayTo = null;
 						}
-				}
-				else
-				{
-					Debug.Log("Full Runway");
+				} else {
+						Debug.Log ("Full Runway");
 				}
 		}
 
 		private void CalculateRound ()
 		{
 				foreach (var runWay in runWayControllers) {
-						runWay.Aircraft.TheAircraft.Cleanlyness -= runWay.Fields.getCleanSkill ();
-						runWay.Aircraft.TheAircraft.Maintenance -= runWay.Fields.getMaintenanceSkill ();
-						if (runWay.Aircraft.TheAircraft.Cleanlyness <= 0 && runWay.Aircraft.TheAircraft.Maintenance <= 0) {
-								runWay.Aircraft.DriveIntoHangar ();
+						if (runWay.Aircraft.TheAircraft != null) {
+								runWay.Aircraft.TheAircraft.Cleanlyness -= runWay.Fields.getCleanSkill ();
+								runWay.Aircraft.TheAircraft.Maintenance -= runWay.Fields.getMaintenanceSkill ();
+								if (runWay.Aircraft.TheAircraft.Cleanlyness <= 0 && runWay.Aircraft.TheAircraft.Maintenance <= 0) {
+										runWay.Aircraft.DriveIntoHangar ();
+								}
 						}
+				}
+				List<GameEvent> tmp = new List<GameEvent> ();
+				foreach (var ewent in gameEvents) {
+						ewent.TimeUntil--;
+						if (ewent.TimeUntil == 0) {
+								ewent.Spawn ();
+								tmp.Add (ewent);
+						}
+				}
+				foreach (var item in tmp) {
+						gameEvents.Remove (item);
 				}
 		}
 
 		private void GenerateEventsForNextRound ()
 		{
-			
+				var e = RandomEventGenerator.Instance.GenerateElement ();
+				if (e != null) {
+						gameEvents.Add (e);
+				}
 		}
 }

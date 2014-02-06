@@ -1292,7 +1292,7 @@ GameObject:
   - 114: {fileID: 980566469}
   m_Layer: 0
   m_Name: runway1
-  m_TagString: Untagged
+  m_TagString: runway1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1530,7 +1530,7 @@ GameObject:
   - 114: {fileID: 1032676899}
   m_Layer: 0
   m_Name: runway3
-  m_TagString: Untagged
+  m_TagString: runway3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1727,7 +1727,7 @@ GameObject:
   - 114: {fileID: 1167860602}
   m_Layer: 0
   m_Name: runway2
-  m_TagString: Untagged
+  m_TagString: runway2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3236,7 +3236,7 @@ GameObject:
   - 114: {fileID: 2005932491}
   m_Layer: 0
   m_Name: heliplatform
-  m_TagString: Untagged
+  m_TagString: heliplatform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
