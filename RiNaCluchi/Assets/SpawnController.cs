@@ -56,7 +56,8 @@ namespace AssemblyCSharp
 				/// <param name="aircraft">Planename.</param>
 				public GameObject SpawnAircraft (Vector3 position, Quaternion rotation, Aircraft aircraft)
 				{
-						//fbx has to be located in "Resources" folder in project view 
+						//fbx has to be located in "Resources" folder in project view
+						//http://forum.unity3d.com/threads/136130-Load-FBX-into-prefab
 						GameObject spawn = AssetDatabase.LoadAssetAtPath("Assets/Resources/" + "Cesna172.fbx",typeof(GameObject)) as GameObject;
 						PrefabUtility.CreatePrefab ("Assets/Resource/" + "Cesna172" + ".prefab", spawn);
 						spawn = GameObject.Instantiate (spawn, position, rotation) as GameObject;
