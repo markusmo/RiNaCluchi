@@ -8,34 +8,21 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 using System;
+using UnityEngine;
 
 namespace AssemblyCSharp
 {
-		public class IllnesCard:EventCard
+		public class TakeOffEvent:GameEvent
 		{
-				public IllnesCard ()
+
+		public TakeOffEvent (Aircraft ac, int time, int runway):base(ac,time,runway)
 				{
+
 				}
 
-				public override ICardEvent getEvent ()
+				public override void Spawn ()
 				{
-						throw new NotImplementedException ();
-				}
-
-				public override double getProbability ()
-				{
-						return 1.0 / 100;
-				}
-
-				public override Card Clone ()
-				{
-						return new Draw2CardsCard ();
-			
-				}
-
-				public override string getName ()
-				{
-						return "IllnessCard";
+						Debug.Log ("Take off from Runway " + Runway + " in " + TimeUntil + " Rounds");
 				}
 		}
 }

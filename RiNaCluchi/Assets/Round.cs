@@ -8,35 +8,24 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 using System;
-
 namespace AssemblyCSharp
 {
-		public class IllnesCard:EventCard
+		public class Round
 		{
-				public IllnesCard ()
+				public Round (int roundNumber, int draws)
 				{
+			this.RoundNumber = roundNumber;
+			this.Draws = draws;
 				}
 
-				public override ICardEvent getEvent ()
-				{
-						throw new NotImplementedException ();
-				}
-
-				public override double getProbability ()
-				{
-						return 1.0 / 100;
-				}
-
-				public override Card Clone ()
-				{
-						return new Draw2CardsCard ();
-			
-				}
-
-				public override string getName ()
-				{
-						return "IllnessCard";
-				}
+		public int RoundNumber {
+						get;
+						set;
+		}
+		public int Draws {
+						get;
+						set;
+		}
 		}
 }
 

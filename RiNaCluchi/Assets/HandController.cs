@@ -37,6 +37,7 @@ public class HandController : MonoBehaviour {
 			}
 		}
 		handFull = true;
+		pressed = false;
 	}
 
 	void OnGUI()

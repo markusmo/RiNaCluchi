@@ -8,35 +8,34 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 using System;
-
 namespace AssemblyCSharp
 {
-		public class IllnesCard:EventCard
+		public abstract class GameEvent
 		{
-				public IllnesCard ()
+
+				public GameEvent (Aircraft ac, int time, int runway)
 				{
+						this.Aircraft = ac;
+						this.TimeUntil = time;
+						this.Runway = runway;
 				}
 
-				public override ICardEvent getEvent ()
-				{
-						throw new NotImplementedException ();
+				public int TimeUntil {
+						get;
+						set;
 				}
 
-				public override double getProbability ()
-				{
-						return 1.0 / 100;
+				public Aircraft Aircraft {
+						get;
+						set;
 				}
 
-				public override Card Clone ()
-				{
-						return new Draw2CardsCard ();
-			
+				public int Runway {
+						get;
+						set;
 				}
 
-				public override string getName ()
-				{
-						return "IllnessCard";
-				}
+				public abstract void Spawn ();
 		}
 }
 

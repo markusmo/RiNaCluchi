@@ -10,7 +10,7 @@
 using System;
 namespace AssemblyCSharp
 {
-		public interface IGameEvent
+		public interface ICardEvent
 		{
 
 		}

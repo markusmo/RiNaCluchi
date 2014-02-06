@@ -20,41 +20,47 @@ public class RunwayCardField : MonoBehaviour
 
 		private Card _theCard;
 	
-		public Card TheCard {
-				get{ return _theCard;}
-				set {
-						if (IsFree) {
-								_theCard = value;
-								this.IsFree = false;
-						}
-				}
+		public void PlaceCard (Card card)
+		{
+				this._theCard = card;
 		}
 	
 		public Card TakeCard ()
 		{
-				if (!IsFree) {
-						Card tmp = this.TheCard.Clone ();
+				if (!IsFree ()) {
+						Card tmp = this._theCard.Clone ();
 						this._theCard = null;
-						this.IsFree = true;
 						return tmp;
 				}
 				return null;
 		}
 
-		private bool isFree = true;
+		public Card TheCard {
+				get{ return this._theCard;}
+				private	set{ this._theCard = value;}
+		}
 
-		public bool IsFree {
-				get{ return isFree;}
-				private set{ isFree = value;}
+		public bool IsFree ()
+		{
+				return this._theCard == null;
 		}
 	
 		void OnMouseDown ()
 		{
+
 				if (this._theCard != null) {
 						_controller.GetCardFromRunway (this);
 						Debug.Log (_theCard.GetType ());
 				} else {
-						_controller.PlaceCardInRunway (this);
+						
+				}
+		}
+
+		void OnMouseOver ()
+		{	
+				if (Input.GetMouseButtonDown (1)) {
+						_controller.PlaceCardInRunway (this);				
 				}
 		}
 }
+

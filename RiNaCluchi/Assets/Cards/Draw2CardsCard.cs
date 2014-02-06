@@ -16,7 +16,7 @@ namespace AssemblyCSharp
 				{
 				}
 
-				public override IGameEvent getEvent ()
+				public override ICardEvent getEvent ()
 				{
 						throw new NotImplementedException ();
 				}

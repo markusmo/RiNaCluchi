@@ -12,7 +12,7 @@ namespace AssemblyCSharp
 {
 		public abstract class EventCard : Card
 		{
-				public abstract IGameEvent getEvent ();
+				public abstract ICardEvent getEvent ();
 
 				public abstract double getProbability ();
 
