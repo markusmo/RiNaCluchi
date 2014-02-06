@@ -8,20 +8,27 @@ ModelImporter:
     100004: plane_MeshPart0
     100006: plane_MeshPart1
     100008: rotor
+    100010: Cesna
+    100012: polySurface14
     400000: //RootNode
     400002: plane
     400004: plane_MeshPart0
     400006: plane_MeshPart1
     400008: rotor
+    400010: Cesna
+    400012: polySurface14
     2300000: plane_MeshPart0
     2300002: plane_MeshPart1
     2300004: rotor
+    2300006: polySurface14
     3300000: plane_MeshPart0
     3300002: plane_MeshPart1
     3300004: rotor
+    3300006: polySurface14
     4300000: plane_MeshPart0
     4300002: plane_MeshPart1
     4300004: rotor
+    4300006: polySurface14
     9500000: //RootNode
   materials:
     importMaterials: 1

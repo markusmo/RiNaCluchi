@@ -15,7 +15,7 @@ public class RunwayCardField : MonoBehaviour
 		// Update is called once per frame
 		void Update ()
 		{
-	
+				this.renderer.enabled = !this.IsFree();
 		}
 
 		private Card _theCard;
@@ -23,6 +23,7 @@ public class RunwayCardField : MonoBehaviour
 		public void PlaceCard (Card card)
 		{
 				this._theCard = card;
+				SpawnController.GetInstance ().ChangeCardTexture (this.gameObject, card);
 		}
 	
 		public Card TakeCard ()

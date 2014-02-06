@@ -6,7 +6,6 @@ public class HandFieldController : MonoBehaviour
 {
 		private HandController handController;
 		private Controller _controller;
-
 		// Use this for initialization
 		void Start ()
 		{
@@ -15,17 +14,16 @@ public class HandFieldController : MonoBehaviour
 				Debug.Log (this.gameObject.tag);
 				this.IsFree = true;
 		}
-	
 		// Update is called once per frame
 		void Update ()
 		{
-	
+				this.renderer.enabled = !this.isFree;
 		}
-		
+
 		private Card _theCard;
 
 		public Card TheCard {
-				private get{ return _theCard;}
+				private get{ return _theCard; }
 				set {
 						if (IsFree) {
 								_theCard = value;
@@ -49,8 +47,8 @@ public class HandFieldController : MonoBehaviour
 		private bool isFree = true;
 
 		public bool IsFree {
-				get{ return isFree;}
-				private set{ isFree = value;}
+				get{ return isFree; }
+				private set{ isFree = value; }
 		}
 
 		void OnMouseDown ()
@@ -59,5 +57,10 @@ public class HandFieldController : MonoBehaviour
 						_controller.GetCardFromHand (this);
 						Debug.Log (_theCard.GetType ());
 				}
+		}
+
+		void OnMouseOver ()
+		{	
+
 		}
 }

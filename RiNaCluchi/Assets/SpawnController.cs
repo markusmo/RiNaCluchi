@@ -4,46 +4,56 @@ using System.Collections.Generic;
 
 namespace AssemblyCSharp
 {
-	public class SpawnController
-	{
+		public class SpawnController
+		{
 				private static SpawnController instance;
-				private Dictionary<string,string> cards = new Dictionary<string,string>();
+				private Dictionary<string,string> cards = new Dictionary<string,string> ();
+				private Dictionary<string,Texture> cardTextures = new Dictionary<string,Texture> ();
 
-				private SpawnController()
+				private SpawnController ()
 				{
-						cards.Add ("AircraftInspectorCard", "p_aircraftinspector.png");
-						cards.Add ("CoffeeCard", "n_kaffee.png");
-						cards.Add ("Draw2CardsCard", "e_zweikarten.png");
-						cards.Add ("FacilityManagerTrainingCard", "s_facilitymanagerausbildung.png");
-						cards.Add ("FurtherPersonellTrainingCard", "s_wifiausbildung.png");
-						cards.Add ("GarageManageTrainingCard", "s_werkstaettenleiterausbildung.png");
-						cards.Add ("IllnessCard", "e_krankheit.png");
-						cards.Add ("MechanicCard", "p_mechaniker.png");
-						cards.Add ("Place2EnhancementCard", "e_zweiaufwertungen.png");
-						cards.Add ("Place2PersonCard", "e_zweiarbeiter.png");
-						cards.Add ("PowerFlannelCard", "w_hoellenwaschlappen.png");
-						cards.Add ("RedbullCard", "n_energiedrink.png");
-						cards.Add ("Vacuum2000Card", "w_staubsauger.png");
-						cards.Add ("WaterCard", "n_wasser.png");
-						cards.Add ("WrenchUltraMega2002Card", "w_schrauber.png");
+						cards.Add ("AircraftInspectorCard", "p_aircraftinspector");
+						cards.Add ("CoffeeCard", "n_kaffee");
+						cards.Add ("Draw2CardsCard", "e_zweikarten");
+						cards.Add ("FacilityManagerTrainingCard", "s_facilitymanagerausbildung");
+						cards.Add ("FurtherPersonellTrainingCard", "s_wifiausbildung");
+						cards.Add ("GarageManageTrainingCard", "s_werkstaettenleiterausbildung");
+						cards.Add ("IllnessCard", "e_krankheit");
+						cards.Add ("MechanicCard", "p_mechaniker");
+						cards.Add ("Place2EnhancementCard", "e_zweiaufwertungen");
+						cards.Add ("Place2PersonCard", "e_zweiarbeiter");
+						cards.Add ("PowerFlannelCard", "w_hoellenwaschlappen");
+						cards.Add ("RedbullCard", "n_energiedrink");
+						cards.Add ("Vacuum2000Card", "w_staubsauger");
+						cards.Add ("WaterCard", "n_wasser");
+						cards.Add ("WrenchUltraMega2002Card", "w_schrauber");
+						cards.Add ("CrewLeaderCard", "p_crewleader");
+
+						Debug.Log ("Loading Textures");
+						foreach(KeyValuePair<string,string> item in cards)
+						{
+								cardTextures.Add (item.Key, Resources.Load (item.Value) as Texture);
+						}
+
 				}
 
-				public static SpawnController GetInstance()
+				public static SpawnController GetInstance ()
 				{
-						if (instance == null) 
-						{
+						if (instance == null) {
 								instance = new SpawnController ();
 						}
 						return instance;
 				}
 
-				public GameObject SpawnCard(Vector3 position,Quaternion rotation, Card card)
+				public Texture GetCardTexture(Card card)
 				{
-						GameObject original = GameObject.FindWithTag ("stackCard");	
-						GameObject clone;
-						clone = GameObject.Instantiate (original, position, rotation) as GameObject;
-						clone.renderer.material.mainTexture = Resources.Load (cards [card.getName()]) as Texture;
-						return clone;
+						return cardTextures [card.getName ()];
+				}
+
+				public void ChangeCardTexture (GameObject obj, Card card)
+				{
+						Debug.Log ("Texture for " + cards [card.getName ()]);
+						obj.renderer.material.mainTexture = this.GetCardTexture(card);
 				}
 
 				/// <summary>
@@ -57,11 +67,11 @@ namespace AssemblyCSharp
 				{
 						//fbx has to be located in "Resources" folder in project view
 						//http://forum.unity3d.com/threads/136130-Load-FBX-into-prefab
-						GameObject spawn = AssetDatabase.LoadAssetAtPath("Assets/Resources/" + "Cessna172.fbx",typeof(GameObject)) as GameObject;
-						PrefabUtility.CreatePrefab ("Assets/Resource/" + "Cesna172" + ".prefab", spawn);
+						GameObject spawn = AssetDatabase.LoadAssetAtPath ("Assets/Resources/" + "Cessna172.fbx", typeof(GameObject)) as GameObject;
+						PrefabUtility.CreatePrefab ("Assets/Resource/" + "Cessna172" + ".prefab", spawn);
 						spawn = GameObject.Instantiate (spawn, position, rotation) as GameObject;
-						spawn.transform.localScale = new Vector3(6,6,6);
+						spawn.transform.localScale = new Vector3 (6, 6, 6);
 						return spawn;
 				}
-	}
+		}
 }
