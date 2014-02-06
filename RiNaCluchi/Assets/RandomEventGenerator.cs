@@ -8,8 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 using System;
-using System.Collections;
-using AssemblyCSharp;
 using System.Collections.Generic;
 
 namespace AssemblyCSharp

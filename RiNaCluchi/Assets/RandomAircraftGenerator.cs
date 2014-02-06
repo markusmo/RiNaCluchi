@@ -44,7 +44,7 @@ namespace AssemblyCSharp
 						for (int i = 0; i < elements.Count; i++) {
 								cumulative += elements [i].Value;
 								if (dice < cumulative) {
-										return (Aircraft)Activator.CreateInstance (elements [i].Key.GetType ());
+										return (Aircraft)Activator.CreateInstance (elements [i].Key);
 								}
 						}
 						return null;

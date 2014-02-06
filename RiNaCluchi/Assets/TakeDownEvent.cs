@@ -21,6 +21,25 @@ namespace AssemblyCSharp
 				public override void Spawn ()
 				{
 						Debug.Log ("Take down on Runway " + Runway + " in " + TimeUntil + " Rounds");
+			Vector3 position = new Vector3();
+			switch (Runway) {
+			case 1:
+				position = SpawnPoint1();
+			break;
+			case 2:
+				position = SpawnPoint2();
+				break;
+			case 3:
+				position = SpawnPoint3();
+				break;
+			case 4:
+				position = SpawnPoint4();
+			break;
+				default:
+								break;
+			}
+			Quaternion z = Quaternion.LookRotation(new Vector3(0f,0f,1f));
+			SpawnController.GetInstance().SpawnAircraft(position,z,this.Aircraft);
 				}
 		}
 }
