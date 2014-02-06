@@ -17,6 +17,10 @@ TagManager:
   - hand11
   - hand12
   - controller
+  - runway1
+  - runway2
+  - runway3
+  - heliplatform
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX

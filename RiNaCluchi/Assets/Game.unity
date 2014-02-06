@@ -964,14 +964,14 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 691954331}
   m_LocalRotation: {x: 0, y: -.999999821, z: 0, w: -.000580460066}
-  m_LocalPosition: {x: -.0291288476, y: -.00324897491, z: -.0350893736}
-  m_LocalScale: {x: .0380230062, y: .0251709726, z: .0408430398}
+  m_LocalPosition: {x: .0542091243, y: -.00215787417, z: .0608808398}
+  m_LocalScale: {x: .0291735958, y: .0394655019, z: .0291736014}
   m_Children:
   - {fileID: 2021784618}
   - {fileID: 1911751111}
   - {fileID: 31728789}
   - {fileID: 517376871}
-  m_Father: {fileID: 1197692468}
+  m_Father: {fileID: 2005932488}
 --- !u!114 &691954333
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1289,6 +1289,7 @@ GameObject:
   - 4: {fileID: 980566466}
   - 33: {fileID: 980566468}
   - 23: {fileID: 980566467}
+  - 114: {fileID: 980566469}
   m_Layer: 0
   m_Name: runway1
   m_TagString: Untagged
@@ -1305,7 +1306,9 @@ Transform:
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: .117376305, y: -.00187268958, z: -.120322548}
   m_LocalScale: {x: 2.00073647, y: .623047173, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1276047419}
+  - {fileID: 1320573731}
   m_Father: {fileID: 1197692468}
 --- !u!23 &980566467
 Renderer:
@@ -1337,6 +1340,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 980566465}
   m_Mesh: {fileID: 4300034, guid: 88166c00e89744428a4f9d69b76a79d0, type: 3}
+--- !u!114 &980566469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 980566465}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2fa53d7939b7bf4bbc65bee1047a9e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &997967219
 GameObject:
   m_ObjectHideFlags: 0
@@ -1513,6 +1527,7 @@ GameObject:
   - 4: {fileID: 1032676896}
   - 33: {fileID: 1032676898}
   - 23: {fileID: 1032676897}
+  - 114: {fileID: 1032676899}
   m_Layer: 0
   m_Name: runway3
   m_TagString: Untagged
@@ -1529,7 +1544,9 @@ Transform:
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -.0225927178, y: -.00187268958, z: -.120322548}
   m_LocalScale: {x: 2.00073647, y: .623047173, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1384759750}
+  - {fileID: 1104695741}
   m_Father: {fileID: 1197692468}
 --- !u!23 &1032676897
 Renderer:
@@ -1561,6 +1578,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1032676895}
   m_Mesh: {fileID: 4300030, guid: 88166c00e89744428a4f9d69b76a79d0, type: 3}
+--- !u!114 &1032676899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1032676895}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2fa53d7939b7bf4bbc65bee1047a9e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1104695740
 GameObject:
   m_ObjectHideFlags: 0
@@ -1584,14 +1612,14 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1104695740}
   m_LocalRotation: {x: 0, y: -.999999821, z: 0, w: -.000580460066}
-  m_LocalPosition: {x: -.0291288476, y: -.00324897491, z: -.0350893736}
-  m_LocalScale: {x: .0380230062, y: .0251709726, z: .0408430398}
+  m_LocalPosition: {x: -.0032668619, y: -.00220895838, z: .0852331743}
+  m_LocalScale: {x: .0190045293, y: .0403997861, z: .0408430099}
   m_Children:
   - {fileID: 1771079984}
   - {fileID: 1639140236}
   - {fileID: 698863125}
   - {fileID: 1302206068}
-  m_Father: {fileID: 1197692468}
+  m_Father: {fileID: 1032676896}
 --- !u!114 &1104695742
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1696,6 +1724,7 @@ GameObject:
   - 4: {fileID: 1167860599}
   - 33: {fileID: 1167860601}
   - 23: {fileID: 1167860600}
+  - 114: {fileID: 1167860602}
   m_Layer: 0
   m_Name: runway2
   m_TagString: Untagged
@@ -1712,7 +1741,9 @@ Transform:
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: .0470890738, y: -.00187268958, z: -.120322548}
   m_LocalScale: {x: 2.00073647, y: .623047173, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1332715179}
+  - {fileID: 1577660257}
   m_Father: {fileID: 1197692468}
 --- !u!23 &1167860600
 Renderer:
@@ -1744,6 +1775,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1167860598}
   m_Mesh: {fileID: 4300032, guid: 88166c00e89744428a4f9d69b76a79d0, type: 3}
+--- !u!114 &1167860602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1167860598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2fa53d7939b7bf4bbc65bee1047a9e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1197692467
 GameObject:
   m_ObjectHideFlags: 0
@@ -1774,12 +1816,8 @@ Transform:
   - {fileID: 108185277}
   - {fileID: 2005932488}
   - {fileID: 980566466}
-  - {fileID: 1320573731}
   - {fileID: 1167860599}
-  - {fileID: 1577660257}
   - {fileID: 1032676896}
-  - {fileID: 1104695741}
-  - {fileID: 691954332}
   m_Father: {fileID: 1987309256}
 --- !u!23 &1197692469
 Renderer:
@@ -1977,6 +2015,44 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: .0320134386, y: .0156266857, z: .189872697}
   m_Center: {x: 0, y: 0, z: -4.76837158e-07}
+--- !u!1 &1276047418
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1276047419}
+  - 114: {fileID: 1276047420}
+  m_Layer: 0
+  m_Name: Runway1Aircrafts
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1276047419
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1276047418}
+  m_LocalRotation: {x: 0, y: -.999999821, z: 0, w: -.000580460066}
+  m_LocalPosition: {x: -.07322561, y: -.00220895838, z: .0852331743}
+  m_LocalScale: {x: .0190045331, y: .0403997861, z: .0408430137}
+  m_Children: []
+  m_Father: {fileID: 980566466}
+--- !u!114 &1276047420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1276047418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b20b63e4d012afd4f96e4ada22eb2f2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1285214294
 GameObject:
   m_ObjectHideFlags: 0
@@ -2121,14 +2197,14 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1320573730}
   m_LocalRotation: {x: 0, y: -.999999821, z: 0, w: -.000580460066}
-  m_LocalPosition: {x: -.0291288476, y: -.00324897491, z: -.0350893736}
-  m_LocalScale: {x: .0380230062, y: .0251709726, z: .0408430398}
+  m_LocalPosition: {x: -.07322561, y: -.00220895838, z: .0852331743}
+  m_LocalScale: {x: .0190045293, y: .0403997861, z: .0408430099}
   m_Children:
   - {fileID: 237087024}
   - {fileID: 174580577}
   - {fileID: 745398822}
   - {fileID: 1010471993}
-  m_Father: {fileID: 1197692468}
+  m_Father: {fileID: 980566466}
 --- !u!114 &1320573732
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2138,6 +2214,82 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 54669d19d0a196e4a9bc127a118b4ed8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &1332715178
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1332715179}
+  - 114: {fileID: 1332715180}
+  m_Layer: 0
+  m_Name: Runway2Aircrafts
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1332715179
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1332715178}
+  m_LocalRotation: {x: 0, y: -.999999821, z: 0, w: -.000580460066}
+  m_LocalPosition: {x: -.0380949304, y: -.00220895838, z: .0852331743}
+  m_LocalScale: {x: .0190045331, y: .0403997861, z: .0408430137}
+  m_Children: []
+  m_Father: {fileID: 1167860599}
+--- !u!114 &1332715180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1332715178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b20b63e4d012afd4f96e4ada22eb2f2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &1384759749
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1384759750}
+  - 114: {fileID: 1384759751}
+  m_Layer: 0
+  m_Name: Runway3Aircrafts
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1384759750
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1384759749}
+  m_LocalRotation: {x: 0, y: -.999999821, z: 0, w: -.000580460066}
+  m_LocalPosition: {x: -.0032668619, y: -.00220895838, z: .0852331743}
+  m_LocalScale: {x: .0190045331, y: .0403997861, z: .0408430137}
+  m_Children: []
+  m_Father: {fileID: 1032676896}
+--- !u!114 &1384759751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1384759749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b20b63e4d012afd4f96e4ada22eb2f2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1436750221
@@ -2412,14 +2564,14 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1577660256}
   m_LocalRotation: {x: 0, y: -.999999821, z: 0, w: -.000580460066}
-  m_LocalPosition: {x: -.0291288476, y: -.00324897491, z: -.0350893736}
-  m_LocalScale: {x: .0380230062, y: .0251709726, z: .0408430398}
+  m_LocalPosition: {x: -.0380949304, y: -.00220895838, z: .0852331743}
+  m_LocalScale: {x: .0190045293, y: .0403997861, z: .0408430099}
   m_Children:
   - {fileID: 2006673261}
   - {fileID: 627957171}
   - {fileID: 1211998689}
   - {fileID: 997967220}
-  m_Father: {fileID: 1197692468}
+  m_Father: {fileID: 1167860599}
 --- !u!114 &1577660258
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2763,6 +2915,44 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: .0320134386, y: .0156266857, z: .189872697}
   m_Center: {x: 7.4505806e-09, y: 0, z: -2.38418579e-07}
+--- !u!1 &1860823363
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1860823364}
+  - 114: {fileID: 1860823365}
+  m_Layer: 0
+  m_Name: Runway4Aircrafts
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1860823364
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1860823363}
+  m_LocalRotation: {x: 0, y: -.999999821, z: 0, w: -.000580460066}
+  m_LocalPosition: {x: .0542091243, y: -.00215787417, z: .0608808398}
+  m_LocalScale: {x: .0291735977, y: .0394655019, z: .0291736014}
+  m_Children: []
+  m_Father: {fileID: 2005932488}
+--- !u!114 &1860823365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1860823363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b20b63e4d012afd4f96e4ada22eb2f2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1910221204
 GameObject:
   m_ObjectHideFlags: 0
@@ -2981,7 +3171,7 @@ Transform:
   m_GameObject: {fileID: 1987309255}
   m_LocalRotation: {x: 0, y: .999999821, z: 0, w: -.000580460066}
   m_LocalPosition: {x: .926760972, y: -.377209187, z: -.622337043}
-  m_LocalScale: {x: 48.9679527, y: 48.9679527, z: 48.9679527}
+  m_LocalScale: {x: 48.9679527, y: 48.9679527, z: 48.9679604}
   m_Children:
   - {fileID: 1984343122}
   - {fileID: 786580566}
@@ -3043,6 +3233,7 @@ GameObject:
   - 4: {fileID: 2005932488}
   - 33: {fileID: 2005932490}
   - 23: {fileID: 2005932489}
+  - 114: {fileID: 2005932491}
   m_Layer: 0
   m_Name: heliplatform
   m_TagString: Untagged
@@ -3059,7 +3250,9 @@ Transform:
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -.0997815505, y: -.00187268958, z: -.120322548}
   m_LocalScale: {x: 1.30333602, y: .637796879, z: 1.39999998}
-  m_Children: []
+  m_Children:
+  - {fileID: 1860823364}
+  - {fileID: 691954332}
   m_Father: {fileID: 1197692468}
 --- !u!23 &2005932489
 Renderer:
@@ -3091,6 +3284,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2005932487}
   m_Mesh: {fileID: 4300036, guid: 88166c00e89744428a4f9d69b76a79d0, type: 3}
+--- !u!114 &2005932491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2005932487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2fa53d7939b7bf4bbc65bee1047a9e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2006673260
 GameObject:
   m_ObjectHideFlags: 0

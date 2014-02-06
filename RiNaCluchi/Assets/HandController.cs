@@ -5,7 +5,6 @@ public class HandController : MonoBehaviour {
 
 	private static int  MAX_CARDS = 12;
 
-	int _actualCards = -1;
 	private HandFieldController[] cards = new HandFieldController[MAX_CARDS];
 
 	private bool handFull = false;
@@ -21,22 +20,23 @@ public class HandController : MonoBehaviour {
 	
 	}
 
-	public void TakeCard(Card card)
+	public void PlaceCard(Card card)
 	{
-		if(_actualCards < MAX_CARDS-1){
-			HandFieldController c = cards[++_actualCards];
-			Debug.Log(c);
-			if(this.cards[_actualCards] == null)
+		for (int i = 0; i < MAX_CARDS; i++) {	
+			if(this.cards[i] == null)
 			{
-				this.cards[_actualCards] = (HandFieldController)GameObject.FindGameObjectWithTag("hand"+(_actualCards+1)).GetComponent<HandFieldController>();
+				this.cards[i] = (HandFieldController)GameObject.FindGameObjectWithTag("hand"+(i+1)).GetComponent<HandFieldController>();
 				Debug.Log("null");
 			}
-			this.cards[_actualCards].TheCard = card;	
-			Debug.Log("Take " +_actualCards);
-			handFull = false;
-		}else{
-			handFull = true;
-		}	
+			if(this.cards[i].IsFree)
+			{
+				this.cards[i].TheCard = card;	
+				Debug.Log("Place " +i);
+				handFull = false;
+				return;
+			}
+		}
+		handFull = true;
 	}
 
 	void OnGUI()
