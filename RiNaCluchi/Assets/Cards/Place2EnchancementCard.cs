@@ -8,6 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 using System;
+
 namespace AssemblyCSharp
 {
 		public class Place2EnchancementCard:EventCard
@@ -20,16 +21,22 @@ namespace AssemblyCSharp
 				{
 						throw new NotImplementedException ();
 				}
-		
+
 				public override double getProbability ()
 				{
 						return 1.0 / 100;
 				}
-		public override Card Clone ()
-		{
-			return new Draw2CardsCard ();
+
+				public override Card Clone ()
+				{
+						return new Draw2CardsCard ();
 			
-		}
+				}
+
+				public override string getName ()
+				{
+						return "Place2EnhancementCard";
+				}
 		}
 }
 

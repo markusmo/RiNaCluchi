@@ -18,7 +18,7 @@ namespace AssemblyCSharp
 
 				public abstract Card Clone ();
 
-
+				public abstract string getName();
 		}
 }
 

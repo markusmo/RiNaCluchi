@@ -31,6 +31,11 @@ namespace AssemblyCSharp
 						return new Draw2CardsCard ();
 
 				}
+
+				public override string getName()
+				{
+						return "Draw2Cards";
+				}
 		}
 }
 

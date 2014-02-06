@@ -8,6 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 using System;
+
 namespace AssemblyCSharp
 {
 		public class WrenchUltraMega2002Card:EnchancementCard,ToolCard
@@ -22,7 +23,7 @@ namespace AssemblyCSharp
 				{
 						return (10 / 3 / 100.0);
 				}
-		
+
 				public override Card Clone ()
 				{
 						WrenchUltraMega2002Card rtVal = new WrenchUltraMega2002Card ();
@@ -30,7 +31,12 @@ namespace AssemblyCSharp
 						rtVal.Duration = this.Duration;
 						rtVal.MaintenancePlus = this.MaintenancePlus;
 						rtVal.TirednessMinus = this.TirednessMinus;
-			return rtVal;
+						return rtVal;
+				}
+
+				public override string getName ()
+				{
+						return "WrenchUltraMega2002Card";
 				}
 		}
 }

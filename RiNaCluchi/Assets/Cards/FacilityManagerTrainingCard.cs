@@ -8,6 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 using System;
+
 namespace AssemblyCSharp
 {
 		public class FacilityManagerTrainingCard:EnchancementCard,TrainingCard
@@ -19,17 +20,23 @@ namespace AssemblyCSharp
 
 				public override double getProbability ()
 				{
-						return 10.0 / 3/100;
+						return 10.0 / 3 / 100;
 				}
-		public override Card Clone ()
-		{
-			FacilityManagerTrainingCard rtVal = new FacilityManagerTrainingCard();
-			rtVal.CleanPlus = this.CleanPlus;
-			rtVal.Duration = this.Duration;
-			rtVal.MaintenancePlus = this.MaintenancePlus;
-			rtVal.TirednessMinus = this.TirednessMinus;
-			return rtVal;
-		}
+
+				public override Card Clone ()
+				{
+						FacilityManagerTrainingCard rtVal = new FacilityManagerTrainingCard ();
+						rtVal.CleanPlus = this.CleanPlus;
+						rtVal.Duration = this.Duration;
+						rtVal.MaintenancePlus = this.MaintenancePlus;
+						rtVal.TirednessMinus = this.TirednessMinus;
+						return rtVal;
+				}
+
+				public override string getName ()
+				{
+						return "FacilityManagerTrainingCard";
+				}
 		}
 }
 

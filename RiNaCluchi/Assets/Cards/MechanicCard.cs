@@ -8,30 +8,36 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 using System;
+
 namespace AssemblyCSharp
 {
 		public class MechanicCard : PersonCard
 		{
 				public MechanicCard ()
 				{
-			this.CleanSkill = 1;
-			this.MaintenanceSkill= 3;
+						this.CleanSkill = 1;
+						this.MaintenanceSkill = 3;
 
 				}
 
-public override double getProbability ()
-			{
-			return 0.30;
-			}
+				public override double getProbability ()
+				{
+						return 0.30;
+				}
 
-		public override Card Clone ()
-		{
-			MechanicCard rtVal = new MechanicCard ();
-			rtVal.MaintenanceSkill = this.MaintenanceSkill;
-			rtVal.CleanSkill = this.CleanSkill;
-			rtVal.Tiredness = this.Tiredness;
-			return rtVal;
-		}
+				public override Card Clone ()
+				{
+						MechanicCard rtVal = new MechanicCard ();
+						rtVal.MaintenanceSkill = this.MaintenanceSkill;
+						rtVal.CleanSkill = this.CleanSkill;
+						rtVal.Tiredness = this.Tiredness;
+						return rtVal;
+				}
+
+				public override string getName ()
+				{
+						return "MechanicCard";
+				}
 		}
 }
 

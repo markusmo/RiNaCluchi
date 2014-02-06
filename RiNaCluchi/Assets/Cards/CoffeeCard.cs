@@ -8,6 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 using System;
+
 namespace AssemblyCSharp
 {
 		public class CoffeeCard:EnchancementCard,FoodCard
@@ -22,15 +23,20 @@ namespace AssemblyCSharp
 						return (5 / 3.0) / 100;
 				}
 
-		public override Card Clone ()
-			{
-			CoffeeCard rtVal = new CoffeeCard();
-			rtVal.CleanPlus = this.CleanPlus;
-			rtVal.Duration = this.Duration;
-			rtVal.MaintenancePlus = this.MaintenancePlus;
-			rtVal.TirednessMinus = this.TirednessMinus;
-			return rtVal;
-			}
+				public override Card Clone ()
+				{
+						CoffeeCard rtVal = new CoffeeCard ();
+						rtVal.CleanPlus = this.CleanPlus;
+						rtVal.Duration = this.Duration;
+						rtVal.MaintenancePlus = this.MaintenancePlus;
+						rtVal.TirednessMinus = this.TirednessMinus;
+						return rtVal;
+				}
+
+				public override string getName ()
+				{
+						return "Coffeecard";
+				}
 		}
 }
 
