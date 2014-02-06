@@ -1,7 +1,6 @@
 using UnityEngine;
-using System;
+using UnityEditor;
 using System.Collections.Generic;
-using System.Collections;
 
 namespace AssemblyCSharp
 {
@@ -43,7 +42,7 @@ namespace AssemblyCSharp
 				{
 						GameObject original = GameObject.FindWithTag ("stackCard");	
 						GameObject clone;
-						clone = (GameObject) GameObject.Instantiate (original, position, rotation);
+						clone = GameObject.Instantiate (original, position, rotation) as GameObject;
 						clone.renderer.material.mainTexture = Resources.Load (cards [card.getName()]) as Texture;
 						return clone;
 				}
@@ -58,8 +57,9 @@ namespace AssemblyCSharp
 				public GameObject SpawnAircraft (Vector3 position, Quaternion rotation, Aircraft aircraft)
 				{
 						//fbx has to be located in "Resources" folder in project view 
-						GameObject spawn = (GameObject) Resources.Load ("Cesna172.fbx");
-						spawn = (GameObject) GameObject.Instantiate (spawn, position, rotation);
+						GameObject spawn = AssetDatabase.LoadAssetAtPath("Assets/Resources/" + "Cesna172.fbx",typeof(GameObject)) as GameObject;
+						PrefabUtility.CreatePrefab ("Assets/Resource/" + "Cesna172" + ".prefab", spawn);
+						spawn = GameObject.Instantiate (spawn, position, rotation) as GameObject;
 						return spawn;
 				}
 	}
