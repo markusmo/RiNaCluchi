@@ -29,17 +29,18 @@ namespace AssemblyCSharp
 
 				public int Fuel {
 						get;
-					   set;
+						set;
 				}
 
 				public int TaxiTime {
 						get;
-					  set;
+						set;
 				}
 
-		public double getProbability()
-		{
-			return 1/9.0;
+				public double getProbability ()
+				{
+						return 1 / 9.0;
+				}
 		}
-}
 
+}

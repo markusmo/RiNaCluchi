@@ -8,15 +8,15 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 using System;
-using UnityEngine;
 using System.Collections;
 using AssemblyCSharp;
+using System.Collections.Generic;
 
 namespace AssemblyCSharp
 {
 		public class RandomEventGenerator
 		{
-				enum EventType
+				public enum EventType
 				{
 						TakeOff,
 						TakeDown,
@@ -26,7 +26,7 @@ namespace AssemblyCSharp
 				
 				private RandomEventGenerator ()
 				{
-						elements = new List<KeyValuePair<EventType,double>> ();
+			elements = new List<KeyValuePair<EventType,double>> ();
 						this.AddElement (EventType.TakeOff, 0.4);
 						this.AddElement (EventType.TakeDown, 0.4);
 						this.AddElement (EventType.Nothing, 0.2);
@@ -42,14 +42,14 @@ namespace AssemblyCSharp
 						}
 				}
 		
-				private List<KeyValuePair<Type,double>> elements;
+		private List<KeyValuePair<EventType,double>> elements;
 		
-				public override void AddElement (EventType element, double probability)
+				public void AddElement (EventType element, double probability)
 				{
 						this.elements.Add (new KeyValuePair<EventType, double> (element, probability));
 				}
 		
-				public override GameEvent GenerateElement ()
+				public GameEvent GenerateElement ()
 				{
 						Random r = new Random ();
 						double dice = r.NextDouble ();
@@ -64,14 +64,11 @@ namespace AssemblyCSharp
 								if (dice < cumulative) {
 										switch (elements [i].Key) {
 										case EventType.TakeOff:												
-												return new TakeOffEvent (ac, ac.Size, runway);
-												break;
+												return new TakeOffEvent (ac, ac.Size, runway);												
 										case EventType.TakeDown:
-												return new TakeDownEvent (ac, ac.Size, runway);
-												break;
+												return new TakeDownEvent (ac, ac.Size, runway);												
 										case EventType.Nothing:
-												return null;
-												break;
+												return null;											
 										default:
 												break;
 										}

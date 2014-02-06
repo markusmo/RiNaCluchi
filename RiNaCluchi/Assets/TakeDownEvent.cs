@@ -14,7 +14,7 @@ namespace AssemblyCSharp
 {
 		public class TakeDownEvent :GameEvent
 		{
-		public TakeDownEvent ():base(ac,time,runway)
+		public TakeDownEvent (Aircraft ac, int time, int runway):base(ac,time,runway)
 				{
 				}
 
