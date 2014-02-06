@@ -8,6 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 using System;
+
 namespace AssemblyCSharp
 {
 		public class Vacuum2000Card:EnchancementCard, ToolCard
@@ -20,19 +21,23 @@ namespace AssemblyCSharp
 
 				public override double getProbability ()
 				{
-					return (10 / 3 / 100.0);
+						return (10 / 3 / 100.0);
 				}
 
-		
-		public override Card Clone ()
-		{
-			Vacuum2000Card rtVal = new Vacuum2000Card();
-			rtVal.CleanPlus = this.CleanPlus;
-			rtVal.Duration = this.Duration;
-			rtVal.MaintenancePlus = this.MaintenancePlus;
-			rtVal.TirednessMinus = this.TirednessMinus;
-			return rtVal;
-		}
+				public override Card Clone ()
+				{
+						Vacuum2000Card rtVal = new Vacuum2000Card ();
+						rtVal.CleanPlus = this.CleanPlus;
+						rtVal.Duration = this.Duration;
+						rtVal.MaintenancePlus = this.MaintenancePlus;
+						rtVal.TirednessMinus = this.TirednessMinus;
+						return rtVal;
+				}
+
+				public override string getName ()
+				{
+						return "Vacuum2000Card";
+				}
 		}
 }
 

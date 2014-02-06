@@ -8,6 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 using System;
+
 namespace AssemblyCSharp
 {
 		public class AircrafInspectorCard:PersonCard
@@ -30,6 +31,11 @@ namespace AssemblyCSharp
 						rtVal.CleanSkill = this.CleanSkill;
 						rtVal.Tiredness = this.Tiredness;
 						return rtVal;
+				}
+
+				public override string getName ()
+				{
+						return "AircraftInspectorCard";
 				}
 		}
 }

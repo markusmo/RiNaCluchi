@@ -21,6 +21,7 @@ TagManager:
   - runway2
   - runway3
   - heliplatform
+  - stackCard
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX

@@ -8,12 +8,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 using System;
+
 namespace AssemblyCSharp
 {
 		public abstract class PersonCard : Card
 		{
-
-					
 				public PersonCard ()
 				{
 						this.Tiredness = 4;
@@ -35,7 +34,10 @@ namespace AssemblyCSharp
 				}
 
 				public abstract double getProbability ();
+
 				public abstract Card Clone ();
+
+				public abstract string getName ();
 		}
 }
 

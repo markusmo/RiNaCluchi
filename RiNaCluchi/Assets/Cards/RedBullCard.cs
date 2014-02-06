@@ -8,9 +8,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 using System;
+
 namespace AssemblyCSharp
 {
-	public class RedBullCard:EnchancementCard, FoodCard
+		public class RedBullCard:EnchancementCard, FoodCard
 		{
 				public RedBullCard ()
 				{
@@ -21,15 +22,21 @@ namespace AssemblyCSharp
 				{
 						return (5 / 3.0) / 100;
 				}
-		public override Card Clone ()
-		{
-			RedBullCard rtVal = new RedBullCard();
-			rtVal.CleanPlus = this.CleanPlus;
-			rtVal.Duration = this.Duration;
-			rtVal.MaintenancePlus = this.MaintenancePlus;
-			rtVal.TirednessMinus = this.TirednessMinus;
-			return rtVal;
-		}
+
+				public override Card Clone ()
+				{
+						RedBullCard rtVal = new RedBullCard ();
+						rtVal.CleanPlus = this.CleanPlus;
+						rtVal.Duration = this.Duration;
+						rtVal.MaintenancePlus = this.MaintenancePlus;
+						rtVal.TirednessMinus = this.TirednessMinus;
+						return rtVal;
+				}
+
+				public override string getName ()
+				{
+						return "RedbullCard";
+				}
 		}
 }
 

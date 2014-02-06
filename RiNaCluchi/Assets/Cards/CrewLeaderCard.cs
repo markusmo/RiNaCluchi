@@ -8,6 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 using System;
+
 namespace AssemblyCSharp
 {
 		public class CrewLeaderCard:PersonCard
@@ -17,20 +18,25 @@ namespace AssemblyCSharp
 						this.MaintenanceSkill = 3;
 						this.CleanSkill = 3;
 				}
-			
+
 				public override double getProbability ()
 				{
 						return 0.15;
 				}
 
-		public override Card Clone ()
-		{
-			CrewLeaderCard rtVal = new CrewLeaderCard ();
-			rtVal.MaintenanceSkill = this.MaintenanceSkill;
-			rtVal.CleanSkill = this.CleanSkill;
-			rtVal.Tiredness = this.Tiredness;
-			return rtVal;
-		}
+				public override Card Clone ()
+				{
+						CrewLeaderCard rtVal = new CrewLeaderCard ();
+						rtVal.MaintenanceSkill = this.MaintenanceSkill;
+						rtVal.CleanSkill = this.CleanSkill;
+						rtVal.Tiredness = this.Tiredness;
+						return rtVal;
+				}
+
+				public override string getName ()
+				{
+						return "CrewLeaderCard";
+				}
 		}
 }
 

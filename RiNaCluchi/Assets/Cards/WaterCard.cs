@@ -8,6 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 using System;
+
 namespace AssemblyCSharp
 {
 		public class WaterCard:EnchancementCard,FoodCard
@@ -15,22 +16,26 @@ namespace AssemblyCSharp
 				public WaterCard ()
 				{
 				}
-		public override double getProbability ()
-			{
-			return 0.01;
-			}
 
-		
-		
-		public override Card Clone ()
-		{
-			WaterCard rtVal = new WaterCard();
-			rtVal.CleanPlus = this.CleanPlus;
-			rtVal.Duration = this.Duration;
-			rtVal.MaintenancePlus = this.MaintenancePlus;
-			rtVal.TirednessMinus = this.TirednessMinus;
-			return rtVal;
-		}
+				public override double getProbability ()
+				{
+						return 0.01;
+				}
+
+				public override Card Clone ()
+				{
+						WaterCard rtVal = new WaterCard ();
+						rtVal.CleanPlus = this.CleanPlus;
+						rtVal.Duration = this.Duration;
+						rtVal.MaintenancePlus = this.MaintenancePlus;
+						rtVal.TirednessMinus = this.TirednessMinus;
+						return rtVal;
+				}
+
+				public override string getName ()
+				{
+						return "WaterCard";
+				}
 		}
 }
 

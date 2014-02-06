@@ -34,6 +34,8 @@ namespace AssemblyCSharp
 		public abstract double getProbability ();
 		
 		public abstract Card Clone ();
+		
+		public abstract string getName();
 		}
 }
 
