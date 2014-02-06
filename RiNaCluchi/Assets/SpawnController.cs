@@ -26,7 +26,6 @@ namespace AssemblyCSharp
 						cards.Add ("Vacuum2000Card", "w_staubsauger.png");
 						cards.Add ("WaterCard", "n_wasser.png");
 						cards.Add ("WrenchUltraMega2002Card", "w_schrauber.png");
-						cards.Add ("AircraftInspectorCard", "p_aircraftinspector.png");
 				}
 
 				public static SpawnController GetInstance()
