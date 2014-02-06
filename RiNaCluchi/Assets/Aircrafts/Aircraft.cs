@@ -14,27 +14,27 @@ namespace AssemblyCSharp
 		{
 				public int Size {
 						get;
-						protected		set;
+						set;
 				}
 
 				public int Cleanlyness {
 						get;
-						protected		set;
+						set;
 				}
 
 				public int Maintenance {
 						get;
-						protected	set;
+						set;
 				}
 
 				public int Fuel {
 						get;
-						protected set;
+					   set;
 				}
 
 				public int TaxiTime {
 						get;
-						protected set;
+					  set;
 				}
 		}
 }

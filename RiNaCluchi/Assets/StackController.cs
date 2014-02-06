@@ -17,6 +17,6 @@ public class StackController : MonoBehaviour {
 	void OnMouseDown()
 	{
 		HandController handController = GameObject.FindGameObjectWithTag("hand").GetComponent<HandController>();
-		handController.TakeCard(RandomCardGenerator.Instance.GenerateElement());
+		handController.PlaceCard(RandomCardGenerator.Instance.GenerateElement());
 	}
 }
