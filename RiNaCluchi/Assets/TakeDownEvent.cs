@@ -39,7 +39,7 @@ namespace AssemblyCSharp
 								break;
 			}
 			Quaternion z = Quaternion.AngleAxis(90f,new Vector3(0,1,0));
-			SpawnController.GetInstance().SpawnAircraft(position,z,this.Aircraft);
+			SpawnController.GetInstance().SpawnAircraft(Runway,position,z,this.Aircraft);
 				}
 		}
 }

@@ -60,22 +60,22 @@ namespace AssemblyCSharp
 
 				protected Vector3 SpawnPoint5 ()
 				{
-						return SpawnPoint1 () + new Vector3 (0f, 0f, -4.5f);
+			return GameObject.FindGameObjectWithTag ("spawnpointfront1").transform.position;
 				}
 
 				protected Vector3 SpawnPoint6 ()
 				{
-						return SpawnPoint2 () + new Vector3 (0f, 0f, -4.5f);
+			return GameObject.FindGameObjectWithTag ("spawnpointfront2").transform.position;
 				}
 
 				protected Vector3 SpawnPoint7 ()
 				{
-						return SpawnPoint3 () + new Vector3 (0f, 0f, -4.5f);
+			return GameObject.FindGameObjectWithTag ("spawnpointfront3").transform.position;
 				}
 
 				protected Vector3 SpawnPoint8 ()
 				{
-						return SpawnPoint4 ();
+			return GameObject.FindGameObjectWithTag ("spawnpointfront4").transform.position;
 				}
 
 				public abstract void Spawn ();

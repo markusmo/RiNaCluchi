@@ -44,25 +44,26 @@ public class AirCraftController : MonoBehaviour {
 	{
 		frame++;
 		Vector3 pOld = airCraftFBX.transform.position;
-		Vector3 pNew = new Vector3();
-		if(!pOld.y < 0.1)
-			{if(spawnpoint == 1 || spawnpoint == 2 || spawnpoint == 3)
-			{
-				pNew = pOld + new Vector3(0,-0.01,-0.01);
-			}
-			else if(spawnpoint == 4)
-			{
-				pNew = pOld + new Vector3(0,-0.01,0);
-			}
+		Vector3 pNew = pOld;
+		if(!(pOld.y < 0.25))
+		{
+				if(spawnpoint == 1 || spawnpoint == 2 || spawnpoint == 3)
+				{
+					pNew = pOld + new Vector3(0f,-0.01f,-0.5f);
+				}
+				else if(spawnpoint == 4)
+				{
+					pNew = pOld + new Vector3(0f,-0.01f,0f);
+				}
 		}
 		 if(spawnpoint == 5 || spawnpoint == 6 || spawnpoint == 7)
 		{
-			pNew = pOld + new Vector3(0,0.01,0.01);
+			pNew = pOld + new Vector3(0f,0.01f,0.5f);
 		}
 		else if(spawnpoint == 8)
 		{
-			pNew = pOld + new Vector3(0,0.01,0);
+			pNew = pOld + new Vector3(0f,0.01f,0f);
 		}
-
+		return pNew;
 	}
 }
