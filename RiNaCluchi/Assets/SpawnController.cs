@@ -72,6 +72,7 @@ namespace AssemblyCSharp
 						PrefabUtility.CreatePrefab ("Assets/Resource/" + "Cessna172" + ".prefab", spawn);
 						spawn = GameObject.Instantiate (spawn, position, rotation) as GameObject;
 						spawn.transform.localScale = new Vector3 (6, 6, 6);
+						spawn.AddComponent ("AirCraftController");
 						return spawn;
 				}
 		}
