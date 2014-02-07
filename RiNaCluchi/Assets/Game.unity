@@ -4958,32 +4958,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1957257754}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1984343121
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 100000, guid: 88166c00e89744428a4f9d69b76a79d0, type: 3}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1984343122}
-  m_Layer: 0
-  m_Name: directionalLight1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1984343122
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 400000, guid: 88166c00e89744428a4f9d69b76a79d0, type: 3}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1984343121}
-  m_LocalRotation: {x: .451274663, y: 0, z: -0, w: .892385125}
-  m_LocalPosition: {x: -.000295858888, y: .121350944, z: .0971154943}
-  m_LocalScale: {x: .5, y: .5, z: .5}
-  m_Children: []
-  m_Father: {fileID: 1987309256}
 --- !u!1 &1987309255
 GameObject:
   m_ObjectHideFlags: 0
@@ -5015,7 +4989,6 @@ Transform:
   - {fileID: 119022074}
   - {fileID: 156586749}
   - {fileID: 46981676}
-  - {fileID: 1984343122}
   - {fileID: 786580566}
   - {fileID: 1131998860}
   - {fileID: 1197692468}
