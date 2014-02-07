@@ -52,8 +52,10 @@ namespace AssemblyCSharp
 
 				public void ChangeCardTexture (GameObject obj, Card card)
 				{
-						Debug.Log ("Texture for " + cards [card.getName ()]);
-						obj.renderer.material.mainTexture = this.GetCardTexture(card);
+						if (card != null) {
+								Debug.Log ("Texture for " + cards [card.getName ()]);
+								obj.renderer.material.mainTexture = this.GetCardTexture (card);
+						}
 				}
 
 				/// <summary>
