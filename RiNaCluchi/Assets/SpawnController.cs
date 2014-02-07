@@ -52,8 +52,10 @@ namespace AssemblyCSharp
 
 				public void ChangeCardTexture (GameObject obj, Card card)
 				{
-						Debug.Log ("Texture for " + cards [card.getName ()]);
-						obj.renderer.material.mainTexture = this.GetCardTexture(card);
+						if (card != null) {
+								Debug.Log ("Texture for " + cards [card.getName ()]);
+								obj.renderer.material.mainTexture = this.GetCardTexture (card);
+						}
 				}
 
 				/// <summary>
@@ -67,10 +69,12 @@ namespace AssemblyCSharp
 				{
 						//fbx has to be located in "Resources" folder in project view
 						//http://forum.unity3d.com/threads/136130-Load-FBX-into-prefab
+						//http://docs.unity3d.com/Documentation/ScriptReference/GameObject.AddComponent.html
 						GameObject spawn = AssetDatabase.LoadAssetAtPath ("Assets/Resources/" + "Cessna172.fbx", typeof(GameObject)) as GameObject;
 						PrefabUtility.CreatePrefab ("Assets/Resource/" + "Cessna172" + ".prefab", spawn);
 						spawn = GameObject.Instantiate (spawn, position, rotation) as GameObject;
 						spawn.transform.localScale = new Vector3 (6, 6, 6);
+						spawn.AddComponent ("AirCraftController");
 						return spawn;
 				}
 		}
