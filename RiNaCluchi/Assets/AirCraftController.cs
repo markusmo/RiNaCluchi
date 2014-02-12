@@ -4,6 +4,7 @@ using AssemblyCSharp;
 
 public class AirCraftController : MonoBehaviour {
 
+	//TODO: change to iTween!
 	// Use this for initialization
 	void Start () {
 	
@@ -49,7 +50,7 @@ public class AirCraftController : MonoBehaviour {
 		{
 				if(spawnpoint == 1 || spawnpoint == 2 || spawnpoint == 3)
 				{
-					pNew = pOld + new Vector3(0f,-0.01f,-0.5f);
+					pNew = pOld + new Vector3(0f,-0.01f,-0.1f);
 				}
 				else if(spawnpoint == 4)
 				{
@@ -58,7 +59,7 @@ public class AirCraftController : MonoBehaviour {
 		}
 		 if(spawnpoint == 5 || spawnpoint == 6 || spawnpoint == 7)
 		{
-			pNew = pOld + new Vector3(0f,0.01f,0.5f);
+			pNew = pOld + new Vector3(0f,0.01f,0.1f);
 		}
 		else if(spawnpoint == 8)
 		{
