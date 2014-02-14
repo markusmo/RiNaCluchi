@@ -30,8 +30,7 @@ namespace AssemblyCSharp
 						cards.Add ("CrewLeaderCard", "p_crewleader");
 
 						Debug.Log ("Loading Textures");
-						foreach(KeyValuePair<string,string> item in cards)
-						{
+						foreach (KeyValuePair<string,string> item in cards) {
 								cardTextures.Add (item.Key, Resources.Load (item.Value) as Texture);
 						}
 
@@ -45,7 +44,7 @@ namespace AssemblyCSharp
 						return instance;
 				}
 
-				public Texture GetCardTexture(Card card)
+				public Texture GetCardTexture (Card card)
 				{
 						return cardTextures [card.getName ()];
 				}
@@ -75,9 +74,9 @@ namespace AssemblyCSharp
 						spawn = GameObject.Instantiate (spawn, position, rotation) as GameObject;
 						spawn.transform.localScale = new Vector3 (6, 6, 6);
 						AirCraftController ac = (AirCraftController)spawn.AddComponent ("AirCraftController");
-						ac.setAircraftFBX(spawn);
-						ac.setSpawnpoint(runway);
-						ac.setIsSpawned();
+						ac.setAircraftFBX (spawn);
+						ac.setSpawnpoint (runway);
+						ac.setIsSpawned ();
 						return spawn;
 				}
 		}

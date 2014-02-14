@@ -15,7 +15,7 @@ namespace AssemblyCSharp
 		public class TakeOffEvent:GameEvent
 		{
 
-		public TakeOffEvent (Aircraft ac, int time, int runway):base(ac,time,runway)
+				public TakeOffEvent (Aircraft ac, int time, int runway):base(ac,time,runway)
 				{
 
 				}
@@ -23,25 +23,25 @@ namespace AssemblyCSharp
 				public override void Spawn ()
 				{
 						Debug.Log ("Take off from Runway " + Runway + " in " + TimeUntil + " Rounds");
-			Vector3 position = new Vector3();
-			switch (Runway) {
-			case 1:
-				position = SpawnPoint5();
-				break;
-			case 2:
-				position = SpawnPoint6();
-				break;
-			case 3:
-				position = SpawnPoint7();
-				break;
-			case 4:
-				position = SpawnPoint8();
-				break;
-			default:
-				break;
-			}
-			Quaternion z = Quaternion.AngleAxis(-90f,new Vector3(0,1,0));
-			SpawnController.GetInstance().SpawnAircraft(Runway+4,position,z,this.Aircraft);
+						Vector3 position = new Vector3 ();
+						switch (Runway) {
+						case 1:
+								position = SpawnPoint5 ();
+								break;
+						case 2:
+								position = SpawnPoint6 ();
+								break;
+						case 3:
+								position = SpawnPoint7 ();
+								break;
+						case 4:
+								position = SpawnPoint8 ();
+								break;
+						default:
+								break;
+						}
+						Quaternion z = Quaternion.AngleAxis (-90f, new Vector3 (0, 1, 0));
+						SpawnController.GetInstance ().SpawnAircraft (Runway + 4, position, z, this.Aircraft);
 				}
 		}
 }

@@ -14,32 +14,32 @@ namespace AssemblyCSharp
 {
 		public class TakeDownEvent :GameEvent
 		{
-		public TakeDownEvent (Aircraft ac, int time, int runway):base(ac,time,runway)
+				public TakeDownEvent (Aircraft ac, int time, int runway):base(ac,time,runway)
 				{
 				}
 
 				public override void Spawn ()
 				{
 						Debug.Log ("Take down on Runway " + Runway + " in " + TimeUntil + " Rounds");
-			Vector3 position = new Vector3();
-			switch (Runway) {
-			case 1:
-				position = SpawnPoint1();
-			break;
-			case 2:
-				position = SpawnPoint2();
-				break;
-			case 3:
-				position = SpawnPoint3();
-				break;
-			case 4:
-				position = SpawnPoint4();
-			break;
-				default:
+						Vector3 position = new Vector3 ();
+						switch (Runway) {
+						case 1:
+								position = SpawnPoint1 ();
 								break;
-			}
-			Quaternion z = Quaternion.AngleAxis(90f,new Vector3(0,1,0));
-			SpawnController.GetInstance().SpawnAircraft(Runway,position,z,this.Aircraft);
+						case 2:
+								position = SpawnPoint2 ();
+								break;
+						case 3:
+								position = SpawnPoint3 ();
+								break;
+						case 4:
+								position = SpawnPoint4 ();
+								break;
+						default:
+								break;
+						}
+						Quaternion z = Quaternion.AngleAxis (90f, new Vector3 (0, 1, 0));
+						SpawnController.GetInstance ().SpawnAircraft (Runway, position, z, this.Aircraft);
 				}
 		}
 }

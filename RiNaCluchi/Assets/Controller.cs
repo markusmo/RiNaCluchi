@@ -92,11 +92,11 @@ public class Controller : MonoBehaviour
 						}
 				}
 				List<GameEvent> tmp = new List<GameEvent> ();
-				foreach (var ewent in gameEvents) {
-						ewent.TimeUntil--;
-						if (ewent.TimeUntil == 0) {
-								ewent.Spawn ();
-								tmp.Add (ewent);
+				foreach (var e in gameEvents) {
+						e.TimeUntil--;
+						if (e.TimeUntil == 0) {
+								e.Spawn ();
+								tmp.Add (e);
 						}
 				}
 				foreach (var item in tmp) {
