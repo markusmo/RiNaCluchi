@@ -24,7 +24,7 @@ namespace AssemblyCSharp
 				
 				private RandomEventGenerator ()
 				{
-			elements = new List<KeyValuePair<EventType,double>> ();
+						elements = new List<KeyValuePair<EventType,double>> ();
 						this.AddElement (EventType.TakeOff, 0.4);
 						this.AddElement (EventType.TakeDown, 0.4);
 						this.AddElement (EventType.Nothing, 0.2);
@@ -40,7 +40,7 @@ namespace AssemblyCSharp
 						}
 				}
 		
-		private List<KeyValuePair<EventType,double>> elements;
+				private List<KeyValuePair<EventType,double>> elements;
 		
 				public void AddElement (EventType element, double probability)
 				{
@@ -66,7 +66,7 @@ namespace AssemblyCSharp
 										case EventType.TakeDown:
 												return new TakeDownEvent (ac, ac.Size, runway);												
 										case EventType.Nothing:
-												return null;											
+												return null;
 										default:
 												break;
 										}

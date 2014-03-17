@@ -7,6 +7,7 @@ namespace AssemblyCSharp
 				public PC9M ()
 				{
 						this.Size = 2;
+						this.Name = "PC9M";
 				}
 		}
 }

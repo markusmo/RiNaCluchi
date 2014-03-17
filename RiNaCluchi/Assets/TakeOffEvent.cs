@@ -43,6 +43,11 @@ namespace AssemblyCSharp
 						Quaternion z = Quaternion.AngleAxis (-90f, new Vector3 (0, 1, 0));
 						SpawnController.GetInstance ().SpawnAircraft (Runway + 4, position, z, this.Aircraft);
 				}
+				
+				public override string ToString ()
+				{
+						return this.Aircraft.Name + " takes off \non runway " + this.Runway;
+				}
 		}
 }
 

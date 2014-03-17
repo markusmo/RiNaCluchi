@@ -7,6 +7,7 @@ namespace AssemblyCSharp
 				public AW139 ()
 				{
 						this.Size = 4;
+						this.Name = "AW139";
 				}
 		}
 }

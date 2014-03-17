@@ -7,6 +7,7 @@ public class Controller : MonoBehaviour
 {
 		List<GameEvent> gameEvents = new List<GameEvent> ();
 		RunwayController[] runWayControllers = new RunwayController[4];
+		private AircraftPrediction prediction;
 		private static int MAX_ROUNDS = 100;
 		private Round actualRound;
 
@@ -22,6 +23,7 @@ public class Controller : MonoBehaviour
 				runWayControllers [2] = (RunwayController)GameObject.FindGameObjectWithTag ("runway3").GetComponent<RunwayController> ();
 				runWayControllers [3] = (RunwayController)GameObject.FindGameObjectWithTag ("heliplatform").GetComponent<RunwayController> ();
 				this.actualRound = new Round (MAX_ROUNDS, 5); //First Round, 5 Draws;
+				this.prediction = (AircraftPrediction)GameObject.FindGameObjectWithTag ("aircraftprediction").GetComponent<AircraftPrediction> ();
 		}
 	
 		// Update is called once per frame
@@ -82,6 +84,7 @@ public class Controller : MonoBehaviour
 
 		private void CalculateRound ()
 		{
+				bool sentEvent = false;
 				foreach (var runWay in runWayControllers) {
 						if (runWay.Aircraft.TheAircraft != null) {
 								runWay.Aircraft.TheAircraft.Cleanlyness -= runWay.Fields.getCleanSkill ();
@@ -96,7 +99,14 @@ public class Controller : MonoBehaviour
 						e.TimeUntil--;
 						if (e.TimeUntil == 0) {
 								e.Spawn ();
-								tmp.Add (e);
+								tmp.Add (e); // may remove items here?
+						} else if (e.TimeUntil == 1) {
+								//TODO: catch multiple events
+								this.prediction.SendMessage ("PredictAircraftEvent", e.ToString ()); //send message to display
+								sentEvent = true;
+						}
+						if (!sentEvent) {
+								this.prediction.SendMessage ("PredictAircraftEvent", "");
 						}
 				}
 				foreach (var item in tmp) {

@@ -7,6 +7,7 @@ namespace AssemblyCSharp
 				public LR45 ()
 				{
 						this.Size = 8;
+						this.Name = "LR45";
 				}
 		}
 }
