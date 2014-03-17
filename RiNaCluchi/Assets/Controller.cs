@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using AssemblyCSharp;
 using System.Collections.Generic;
@@ -84,7 +84,7 @@ public class Controller : MonoBehaviour
 
 		private void CalculateRound ()
 		{
-				bool sentEvent = false;
+				string toSend = null;
 				foreach (var runWay in runWayControllers) {
 						if (runWay.Aircraft.TheAircraft != null) {
 								runWay.Aircraft.TheAircraft.Cleanlyness -= runWay.Fields.getCleanSkill ();
@@ -100,12 +100,12 @@ public class Controller : MonoBehaviour
 						if (e.TimeUntil == 0) {
 								e.Spawn ();
 								tmp.Add (e); // may remove items here?
-						} else if (e.TimeUntil == 1) {
-								//TODO: catch multiple events
-								this.prediction.SendMessage ("PredictAircraftEvent", e.ToString ()); //send message to display
-								sentEvent = true;
+						} else if (e.TimeUntil == 1) { //all events which happen in the next round
+								toSend += "\n" + e.ToString (); //assemble message
 						}
-						if (!sentEvent) {
+						if (toSend != null) {//send message to display
+								this.prediction.SendMessage ("PredictAircraftEvent", toSend);
+						} else {
 								this.prediction.SendMessage ("PredictAircraftEvent", "");
 						}
 				}
