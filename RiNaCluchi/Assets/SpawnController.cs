@@ -68,9 +68,8 @@ namespace AssemblyCSharp
 				public GameObject SpawnAircraft (int runway, Vector3 position, Quaternion rotation, Aircraft aircraft)
 				{
 						//fbx has to be located in "Resources" folder in project view
-						//https://docs.unity3d.com/Documentation/ScriptReference/Resources.LoadAssetAtPath.html
 						//http://docs.unity3d.com/Documentation/ScriptReference/GameObject.AddComponent.html
-						GameObject spawn = Resources.LoadAssetAtPath ("Assets/Resources/" + "Cessna172.fbx", typeof(GameObject)) as GameObject;
+						GameObject spawn = Resources.Load ("Cessna172", typeof(GameObject)) as GameObject;
 						spawn = GameObject.Instantiate (spawn, position, rotation) as GameObject;
 						spawn.transform.localScale = new Vector3 (6, 6, 6);
 						AirCraftController ac = (AirCraftController)spawn.AddComponent ("AirCraftController");
