@@ -7,6 +7,7 @@ namespace AssemblyCSharp
 				public SKA200 ()
 				{
 						this.Size = 6;
+						this.Name = "SKA200";
 				}
 		}
 }

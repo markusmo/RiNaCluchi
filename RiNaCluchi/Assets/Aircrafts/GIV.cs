@@ -7,6 +7,7 @@ namespace AssemblyCSharp
 				public GIV ()
 				{
 						this.Size = 7;
+						this.Name = "GIV";
 				}
 		}
 }

@@ -7,6 +7,7 @@ namespace AssemblyCSharp
 				public FR172 ()
 				{
 						this.Size = 2;
+						this.Name = "FR172";
 				}
 		}
 }

@@ -1,27 +1,28 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class RunwayController : MonoBehaviour {
-
-
-	// Use this for initialization
-	void Start () {
-		this.Aircraft =  gameObject.GetComponentInChildren<AirCraftController>();
-		this.Fields = gameObject.GetComponentInChildren<RunwayCardFieldsController>();
-	}
+public class RunwayController : MonoBehaviour
+{
+		// Use this for initialization
+		void Start ()
+		{
+				this.Aircraft = gameObject.GetComponentInChildren<AirCraftController> ();
+				this.Fields = gameObject.GetComponentInChildren<RunwayCardFieldsController> ();
+		}
 	
-	// Update is called once per frame
-	void Update () {
+		// Update is called once per frame
+		void Update ()
+		{
 	
-	}
+		}
 
-	public RunwayCardFieldsController Fields {
+		public RunwayCardFieldsController Fields {
 				get;
-	private			set;
-	}
+				private			set;
+		}
 
-	public AirCraftController Aircraft {
+		public AirCraftController Aircraft {
 				get;
-	private			set;
-	}
+				private			set;
+		}
 }

@@ -1,5 +1,6 @@
 using UnityEngine;
-using UnityEditor;
+
+//using UnityEditor;
 using System.Collections.Generic;
 
 namespace AssemblyCSharp
@@ -30,8 +31,7 @@ namespace AssemblyCSharp
 						cards.Add ("CrewLeaderCard", "crewleader");
 
 						Debug.Log ("Loading Textures");
-						foreach(KeyValuePair<string,string> item in cards)
-						{
+						foreach (KeyValuePair<string,string> item in cards) {
 								cardTextures.Add (item.Key, Resources.Load (item.Value) as Texture);
 						}
 
@@ -45,7 +45,7 @@ namespace AssemblyCSharp
 						return instance;
 				}
 
-				public Texture GetCardTexture(Card card)
+				public Texture GetCardTexture (Card card)
 				{
 						return cardTextures [card.getName ()];
 				}
@@ -68,16 +68,14 @@ namespace AssemblyCSharp
 				public GameObject SpawnAircraft (int runway, Vector3 position, Quaternion rotation, Aircraft aircraft)
 				{
 						//fbx has to be located in "Resources" folder in project view
-						//http://forum.unity3d.com/threads/136130-Load-FBX-into-prefab
 						//http://docs.unity3d.com/Documentation/ScriptReference/GameObject.AddComponent.html
-						GameObject spawn = AssetDatabase.LoadAssetAtPath ("Assets/Resources/" + "Cessna172.fbx", typeof(GameObject)) as GameObject;
-						PrefabUtility.CreatePrefab ("Assets/Resource/" + "Cessna172" + ".prefab", spawn);
+						GameObject spawn = Resources.Load ("Cessna172", typeof(GameObject)) as GameObject;
 						spawn = GameObject.Instantiate (spawn, position, rotation) as GameObject;
 						spawn.transform.localScale = new Vector3 (6, 6, 6);
 						AirCraftController ac = (AirCraftController)spawn.AddComponent ("AirCraftController");
-						ac.setAircraftFBX(spawn);
-						ac.setSpawnpoint(runway);
-						ac.setIsSpawned();
+						ac.setAircraftFBX (spawn);
+						ac.setSpawnpoint (runway);
+						ac.setIsSpawned ();
 						return spawn;
 				}
 		}

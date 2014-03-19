@@ -14,18 +14,19 @@ namespace AssemblyCSharp
 		{
 				public Round (int roundNumber, int draws)
 				{
-			this.RoundNumber = roundNumber;
-			this.Draws = draws;
+						this.RoundNumber = roundNumber;
+						this.Draws = draws;
 				}
 
-		public int RoundNumber {
+				public int RoundNumber {
 						get;
 						set;
-		}
-		public int Draws {
+				}
+
+				public int Draws {
 						get;
 						set;
-		}
+				}
 		}
 }
 

@@ -41,6 +41,8 @@ namespace AssemblyCSharp
 				{
 						return 1 / 9.0;
 				}
+
+				public String Name{ get; set; }
 		}
 
 }

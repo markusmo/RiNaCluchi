@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using AssemblyCSharp;
 using System.Collections.Generic;
@@ -7,6 +7,7 @@ public class Controller : MonoBehaviour
 {
 		List<GameEvent> gameEvents = new List<GameEvent> ();
 		RunwayController[] runWayControllers = new RunwayController[4];
+		private AircraftPrediction prediction;
 		private static int MAX_ROUNDS = 100;
 		private Round actualRound;
 
@@ -22,6 +23,7 @@ public class Controller : MonoBehaviour
 				runWayControllers [2] = (RunwayController)GameObject.FindGameObjectWithTag ("runway3").GetComponent<RunwayController> ();
 				runWayControllers [3] = (RunwayController)GameObject.FindGameObjectWithTag ("heliplatform").GetComponent<RunwayController> ();
 				this.actualRound = new Round (MAX_ROUNDS, 5); //First Round, 5 Draws;
+				this.prediction = (AircraftPrediction)GameObject.FindGameObjectWithTag ("aircraftprediction").GetComponent<AircraftPrediction> ();
 		}
 	
 		// Update is called once per frame
@@ -82,6 +84,7 @@ public class Controller : MonoBehaviour
 
 		private void CalculateRound ()
 		{
+				string toSend = null;
 				foreach (var runWay in runWayControllers) {
 						if (runWay.Aircraft.TheAircraft != null) {
 								runWay.Aircraft.TheAircraft.Cleanlyness -= runWay.Fields.getCleanSkill ();
@@ -92,11 +95,18 @@ public class Controller : MonoBehaviour
 						}
 				}
 				List<GameEvent> tmp = new List<GameEvent> ();
-				foreach (var ewent in gameEvents) {
-						ewent.TimeUntil--;
-						if (ewent.TimeUntil == 0) {
-								ewent.Spawn ();
-								tmp.Add (ewent);
+				foreach (var e in gameEvents) {
+						e.TimeUntil--;
+						if (e.TimeUntil == 0) {
+								e.Spawn ();
+								tmp.Add (e); // may remove items here?
+						} else if (e.TimeUntil == 1) { //all events which happen in the next round
+								toSend += "\n" + e.ToString (); //assemble message
+						}
+						if (toSend != null) {//send message to display
+								this.prediction.SendMessage ("PredictAircraftEvent", toSend);
+						} else {
+								this.prediction.SendMessage ("PredictAircraftEvent", "");
 						}
 				}
 				foreach (var item in tmp) {
