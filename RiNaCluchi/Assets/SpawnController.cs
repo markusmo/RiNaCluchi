@@ -12,22 +12,22 @@ namespace AssemblyCSharp
 
 				private SpawnController ()
 				{
-						cards.Add ("AircraftInspectorCard", "p_aircraftinspector");
-						cards.Add ("CoffeeCard", "n_kaffee");
-						cards.Add ("Draw2CardsCard", "e_zweikarten");
-						cards.Add ("FacilityManagerTrainingCard", "s_facilitymanagerausbildung");
-						cards.Add ("FurtherPersonellTrainingCard", "s_wifiausbildung");
-						cards.Add ("GarageManageTrainingCard", "s_werkstaettenleiterausbildung");
-						cards.Add ("IllnessCard", "e_krankheit");
-						cards.Add ("MechanicCard", "p_mechaniker");
-						cards.Add ("Place2EnhancementCard", "e_zweiaufwertungen");
-						cards.Add ("Place2PersonCard", "e_zweiarbeiter");
-						cards.Add ("PowerFlannelCard", "w_hoellenwaschlappen");
-						cards.Add ("RedbullCard", "n_energiedrink");
-						cards.Add ("Vacuum2000Card", "w_staubsauger");
-						cards.Add ("WaterCard", "n_wasser");
-						cards.Add ("WrenchUltraMega2002Card", "w_schrauber");
-						cards.Add ("CrewLeaderCard", "p_crewleader");
+						cards.Add ("AircraftInspectorCard", "aircraftinspector");
+			cards.Add ("CoffeeCard", "coffee");
+			cards.Add ("Draw2CardsCard", "picktwocards");
+			cards.Add ("FacilityManagerTrainingCard", "facilitymanagertraining");
+			cards.Add ("FurtherPersonellTrainingCard", "advancedtraining");
+			cards.Add ("GarageManageTrainingCard", "extendedmechanictraining");
+			cards.Add ("IllnessCard", "sickness");
+			cards.Add ("MechanicCard", "mechanic");
+			cards.Add ("Place2EnhancementCard", "laytwoupgrades");
+			cards.Add ("Place2PersonCard", "twoworkers");
+			cards.Add ("PowerFlannelCard", "washclothofdeath");
+			cards.Add ("RedbullCard", "energydrink");
+			cards.Add ("Vacuum2000Card", "vacuum");
+			cards.Add ("WaterCard", "water");
+			cards.Add ("WrenchUltraMega2002Card", "drill");
+						cards.Add ("CrewLeaderCard", "crewleader");
 
 						Debug.Log ("Loading Textures");
 						foreach(KeyValuePair<string,string> item in cards)
